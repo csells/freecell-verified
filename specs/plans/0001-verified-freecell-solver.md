@@ -1,6 +1,6 @@
 # Plan 0001: verified standard FreeCell solver
 
-Status (2026-10-25): M0–M4 COMPLETE; M5 PARTIAL; M6 PARTIAL. Each milestone ends with a status note naming its evidence. Read the vision for the scope and result contracts.
+Status (2026-10-25): M0–M4 COMPLETE; M5 PARTIAL; M6 PARTIAL; M7 COMPLETE. Each milestone ends with a status note naming its evidence. Read the vision for the scope and result contracts.
 
 ## Dependency order
 
@@ -90,6 +90,7 @@ Acceptance: each enabled optimization has a scoped proof, differential evidence 
 
 **Status: PARTIAL.** Evidence: `specs/evidence/m5/README.md`.
 - Two optimizations are enabled: proof-neutral successor ordering and the separately labelled checked proposer, both measured. Deals 1–1000 at 10 s: 944 checked wins and 56 unknown, against 62/100 decided for the earlier DFS-only configuration.
+- The proposer now also makes multi-card run moves, written out as single-card moves, and treats positions that differ only in column order as duplicates. With these it solved 31,819 of deals 1–32000 at 20 s each (`specs/evidence/ms32000/`).
 - Not done: column-symmetry and auto-move reductions of the reference search (83,239 / 61,643), compact encoding, and faster frontiers.
 
 ## M6 — Review and release preparation
@@ -110,7 +111,21 @@ Acceptance: all vision success criteria are met, review findings resolved or exp
 - Two independent adversarial reviews were run: `specs/reviews/0001-proofs-and-rules.md` (no blocking or significant findings) and `specs/reviews/0002-cli-and-certificates.md` (no wrong verdicts; 7 minor findings). All their minor findings except the free-cell auto-play proof (disclosed instead) were resolved, with regression tests.
 - Toolchain pinned. Fast and long check scripts are in place. Fresh-copy reproduction (working tree without `.lake`) is logged in `specs/evidence/m6/fresh-copy-check.log`.
 - Remaining:
-  - CI configuration was not added; no remote exists.
-  - No git commit or release has been made.
-  - The contribution proposal and any public repository, licence or upstream submission await the user's direction.
-  - Microsoft auto-play equivalence is disclosed, not proved.
+  - CI configuration was not added.
+  - The repository is public at github.com/csells/freecell-verified under the MIT licence, at the user's direction. No release has been tagged.
+  - The contribution proposal and any upstream submission await the user's direction.
+  - Auto-play equivalence is now proved for safe policies (M7). That Microsoft's exact rule is such a policy is not verified.
+
+## M7 — Settle the Microsoft 32,000 and forced auto-play
+
+Added after M0–M6 at the user's direction. Goals: decide every Microsoft deal 1–32000 in one Lean theorem, and close the gap between standard FreeCell and a game that plays safe cards home automatically.
+
+Acceptance: a theorem stating exactly which of deals 1–32000 are winnable, whose only non-standard axioms are explicit `native_decide` evaluations of proved-sound checkers, with tamper controls; and a general auto-play theorem with standard axioms only.
+
+**Status: COMPLETE.**
+- `ms32000_winnable_iff` (`Examples/Ms32000.lean`): for 1 ≤ n ≤ 32000, deal n is winnable iff n ≠ 11982. Its axioms are the standard three plus 33 `native_decide` evaluations: 32 chunks of `checkDealChunk`, whose soundness is `checkDealChunk_sound` in `FreeCell/Bulk.lean`, and the #11982 search. Evidence, provenance, hashes and controls are in `specs/evidence/ms32000/README.md`. Of the 31,999 winning move lists, 31,926 came from the proposer and 73 from Freecell Solver 6.16.0. All are untrusted inputs re-checked by `checkWin`.
+- `FreeCell/AutoPlay.lean`, standard axioms only:
+  - `SafeStep.winnable_iff`: a safe foundation move (an ace or a two, or a card whose opposite-colour foundations are at most one rank lower) preserves winnability. It also never lengthens the shortest win (`SafeStep.winsIn`).
+  - `autoWinnable_iff`: for any auto-play policy that only makes safe moves, the forced-auto-play game has exactly the winnable starts of standard FreeCell.
+  - `autoWinnable_autoPlay_iff` instantiates it with a concrete policy. That policy agrees with the proposer's `autoHome` on 300 deals and the positions one move into them (`FreeCellTest`, section "auto-play").
+- Not verified: Microsoft's exact auto-play rule. If it only ever plays safe cards in this sense, `autoWinnable_iff` covers it; we found no primary documentation of the rule.

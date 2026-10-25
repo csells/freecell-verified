@@ -19,6 +19,16 @@ All theorems below are checked by Lean with no `sorry` and depend only on Lean's
 | `runSteps_eq_run` | `measure + 1` steps of the search always suffice and give the same answer |
 | `verifyCertificate_winnable`, `…_unwinnable` | an accepted certificate file proves its verdict for the requested position, whatever the file contained |
 | `Supermove.*` (see `FreeCell/Supermove.lean`) | capacity-limited sequence moves are compositions of single-card moves |
+| `SafeStep.winnable_iff` | playing a safe card home (an ace or a two, or a card whose opposite-colour foundations are at most one rank lower) never changes whether a position is winnable |
+| `autoWinnable_iff` | with forced auto-play by any policy that only plays safe cards, exactly the same starts are winnable as in standard FreeCell |
+| `checkDealChunk_sound` | an accepted block of compact move lists proves each listed deal winnable |
+
+### Every Microsoft deal 1–32000
+
+    theorem ms32000_winnable_iff (n : Nat) (h1 : 1 ≤ n) (h2 : n ≤ 32000) :
+        (∃ t, Reachable (msDeal n) t ∧ t.Won) ↔ n ≠ 11982
+
+Of the original 32,000 Microsoft deals, #11982 is the only one that cannot be won (`Examples/Ms32000.lean`). Every other deal has a stored winning move list, 5.3 million single-card moves in all, which Lean replays through `checkWin` when the file is built. #11982 is settled by the complete search. This theorem uses `native_decide` for those evaluations: 33 axioms, one for each of the 32 blocks of 1,000 deals and one for #11982. It therefore trusts Lean's compiler as well as its kernel. How the move lists were found (our proposer for 31,926 deals, Freecell Solver for the hardest 73) does not matter to the proof; see `specs/evidence/ms32000/`.
 
 `winnable` is defined by well-founded recursion — no fuel, no `partial` — so termination is part of the definition being accepted.
 
@@ -27,7 +37,7 @@ All theorems below are checked by Lean with no `sorry` and depend only on Lean's
 - **The rules.** `FreeCell/Card.lean`, `State.lean` (`Valid`, `Won`), `Rules.lean` (`Pick`, `Put`, `Legal`) and `Reach.lean` (`Reachable`) say what FreeCell is. Lean cannot check that they match the game; they were compared against the #11982 reference and an independent Python implementation (identical successor sets and 314,366 edges on all 84,767 positions of deal #11982) and against independently found winning paths.
 - **Microsoft numbering.** `msDeal` is checked against Freecell Solver's generator for deals 1–32000 (`scripts/check-long.sh`), not proved equal to Microsoft's program.
 - **Execution.** The command line is compiled Lean code. Its decided answers carry Lean proofs about the values computed, but running it trusts the Lean compiler and runtime, as any executable does. `Examples/Deals.lean` states per-deal corollaries with `native_decide`, which records that trust as an axiom.
-- **The win proposer** (`FreeCell/Propose.lean`) is an unproved best-first search used only to find winning paths fast. Its proposals count only after the proved `checkWin` accepts them, and unwinnability is only ever decided by the proved reference search.
+- **The win proposer** (`FreeCell/Propose.lean`) is an unproved best-first search used only to find winning paths fast. Its proposals count only after the proved `checkWin` accepts them, and unwinnability is only ever decided by the proved reference search. Move lists from Freecell Solver, used for 73 hard deals in the 32,000-deal theorem, are treated the same way.
 
 ## Build and check
 
@@ -35,14 +45,14 @@ Requires [elan](https://github.com/leanprover/elan); `lean-toolchain` pins Lean 
 
     lake build                 # library and the freecell executable
     scripts/check.sh           # forbidden constructs, axioms, Lean tests, CLI tests (~4 minutes)
-    scripts/check-long.sh      # original #11982 proof, native_decide corollaries, deal parity (~15 minutes; needs cc)
+    scripts/check-long.sh      # original #11982 proof, native_decide corollaries incl. all 32,000 deals, deal parity (~15 minutes; needs cc)
 
 ## Using the solver
 
     $ .lake/build/bin/freecell solve --deal 11982
     unwinnable: every reachable position explored (84767 positions)
     $ .lake/build/bin/freecell solve --deal 1 --certificate deal1.cert
-    winnable: 111 moves (found by the proposer search, checked)
+    winnable: 165 moves (found by the proposer search, checked)
     $ .lake/build/bin/freecell verify --deal 1 deal1.cert
     certificate accepted: the position is winnable
 
@@ -64,7 +74,7 @@ Finite does not mean fast. Deal #11982's complete search visits 84,767 positions
 
 ## Scope
 
-Standard FreeCell only: 52 cards, eight columns, four cells, single-card move semantics (supermoves within the usual capacity are shown equivalent). Cards never return from a foundation, and free cells are interchangeable, so there are no cell-to-cell moves. Microsoft's program also plays some cards home automatically; that forced auto-play is not modelled. An unwinnable verdict carries over to Microsoft's program, because auto-play only restricts play. A winnable verdict carries over only through the usual "safe auto-moves never hurt" argument, which is not proved here, and a winning certificate's move list may not replay verbatim in Microsoft's program. Other solitaire games, other cell counts, shortest solutions and a GUI are not covered.
+Standard FreeCell only: 52 cards, eight columns, four cells, single-card move semantics (supermoves within the usual capacity are shown equivalent). Cards never return from a foundation, and free cells are interchangeable, so there are no cell-to-cell moves. Microsoft's program also plays some cards home automatically. `autoWinnable_iff` proves that forced auto-play changes nothing about which positions are winnable, as long as the policy only plays safe cards. That Microsoft's exact rule is such a policy is not verified here. A winning certificate is a standard single-card move list, and may not replay move for move in a program that auto-plays. Other solitaire games, other cell counts, shortest solutions and a GUI are not covered.
 
 ## License
 

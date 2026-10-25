@@ -42,6 +42,61 @@ def autoHome : Nat → State → List Move → State × List Move
       | some t => autoHome n t (m :: path)
       | none => (s, path)
 
+/-- Move the top `k` cards of column `i` onto column `j` as single-card moves, using the
+free cells and the empty columns `temps` (the usual supermove decomposition). Returns the
+new position and the moves made (most recent first), or `none` if it does not fit. -/
+def moveRunCells (s : State) (k i j : Nat) : Option (State × List Move) := do
+    -- through the free cells: park k-1 cards, move the last, bring the parked ones back
+    let parked := (s.cols.getD i []).take (k - 1)
+    let mut t := s
+    let mut path : List Move := []
+    for _ in parked do
+      let m := Move.mk (.col i) .cell
+      t ← applyMove t m; path := m :: path
+    let m := Move.mk (.col i) (.col j)
+    t ← applyMove t m; path := m :: path
+    for c in parked.reverse do
+      let m := Move.mk (.cell c) (.col j)
+      t ← applyMove t m; path := m :: path
+    return (t, path)
+
+/-- See `moveRunCells`; additionally uses the empty columns `temps`. -/
+def moveRun (s : State) (k i j : Nat) : List Nat → Option (State × List Move)
+  | [] => moveRunCells s k i j
+  | e :: rest =>
+    let cap := (4 - s.cells.length + 1) * 2 ^ rest.length
+    if k ≤ (4 - s.cells.length + 1) then moveRunCells s k i j else do
+      let m := min cap (k - 1)
+      let (t1, p1) ← moveRun s m i e rest
+      let (t2, p2) ← moveRun t1 (k - m) i j rest
+      let (t3, p3) ← moveRun t2 m e j rest
+      return (t3, p3 ++ p2 ++ p1)
+
+/-- Length of the ordered run at the top of a column. -/
+def runLength : List Card → Nat
+  | c :: p :: rest => if Card.canStack c p then runLength (p :: rest) + 1 else 1
+  | [_] => 1
+  | [] => 0
+
+/-- Multi-card moves between columns (two or more cards), expanded into single-card moves. -/
+def runSuccs (s : State) : List (List Move × State) :=
+  colIdx.flatMap fun i =>
+    let col := s.cols.getD i []
+    let n := runLength col
+    colIdx.flatMap fun j =>
+      if i = j then [] else
+      let dst := s.cols.getD j []
+      let temps := colIdx.filter fun e => e ≠ i ∧ e ≠ j ∧ (s.cols.getD e []).isEmpty
+      let ks := match dst with
+        | [] => (List.range n).filter (fun k => 2 ≤ k ∧ k < col.length)
+        | p :: _ => (List.range (n + 1)).filter fun k =>
+            2 ≤ k ∧ (col.getD (k - 1) ⟨0, 0⟩).canStack p
+      ks.filterMap fun k => (moveRun s k i j temps).map fun (t, p) => (p, t)
+
+/-- Columns in a fixed order, so positions differing only by column order look the same. -/
+def canonical (s : State) : State :=
+  { s with cols := s.cols.mergeSort fun a b => (a.getLast?.map Card.code).getD 99 ≤ (b.getLast?.map Card.code).getD 99 }
+
 /-- How many cards cover the next card each foundation needs. -/
 def nextDepth (s : State) (su : Nat) : Nat :=
   let r := s.home.getD su 0 + 1
@@ -72,10 +127,10 @@ def Proposer.init (start : State) : List Move ⊕ Proposer :=
   let (s0, p0) := autoHome 52 start []
   if s0.won then .inl p0.reverse
   else .inr ⟨TreeMap.empty.insert (key (proposerScore s0) 0) (s0, p0),
-    HashSet.emptyWithCapacity 4096 |>.insert s0, 1, 0⟩
+    HashSet.emptyWithCapacity 4096 |>.insert (canonical s0), 1, 0⟩
 
 inductive ProposeStep where
-  | found (moves : List Move)
+  | found (moves : List Move) (seen : Nat)
   | exhausted
   | more (p : Proposer)
 
@@ -91,11 +146,13 @@ def Proposer.run (n : Nat) (maxSeen : Option Nat) (p : Proposer) : ProposeStep :
     let some ((k, (s, path))) := queue.maxEntry? | return .exhausted
     queue := queue.erase k
     expanded := expanded + 1
-    for (m, t0) in succs s do
-      let (t, path') := autoHome 52 t0 (m :: path)
-      if t.won then return .found path'.reverse
-      unless seen.contains t do
-        seen := seen.insert t
+    let next := (succs s).map (fun mt => ([mt.1], mt.2)) ++ runSuccs s
+    for (ms, t0) in next do
+      let (t, path') := autoHome 52 t0 (ms ++ path)
+      if t.won then return .found path'.reverse seen.size
+      let ck := canonical t
+      unless seen.contains ck do
+        seen := seen.insert ck
         queue := queue.insert (key (proposerScore t) counter) (t, path')
         counter := counter + 1
   return .more ⟨queue, seen, counter, expanded⟩

@@ -4,6 +4,7 @@ Before implementation, read `specs/vision/verified-freecell.md`, `specs/plans/00
 
 - Work inside this repository. Treat the blog repository and copied reference evidence as read-only inputs. Preserve original reference files; derive new implementation files from copies.
 - Preserve user data and experiment output. Test in fresh scratch locations. Kill only processes this task started, by explicit PID; never kill applications or use name patterns.
+- Run solver binaries, `lake` builds and long batches through `scripts/memguard.sh`, with explicit position or time limits. An uncapped search once exhausted the machine's memory. `tests/tools/solve_range.py` already does both and lowers its CPU priority.
 - Keep internal decisions, plans and review evidence under `specs/`. Update milestone status only when its acceptance evidence exists.
 - Use red/green tests for executable behavior and Lean-checked theorem statements for proof obligations. Record failures explicitly; limits and interruption yield unknown, not unwinnable.
 - Report the actual axiom dependencies and specification scope. `sorry`, unproved axioms and successful finite test suites cannot stand in for the promised general theorems.

@@ -217,6 +217,44 @@ def testCodec : TestM Unit := do
   check "reject certificate with wrong count"
     (verifyCertificate deal1 (writeCertificate ⟨deal1, .win (winPath 1)⟩ ++ "c1 h\n") matches .error _)
 
+/-- Test-side encoder for the compact move format of `FreeCell.Bulk`. -/
+def encodeMove (m : Move) : String :=
+  let col (i : Nat) : String := toString (i + 1)
+  let src := match m.src with
+    | .col i => col i
+    | .cell c => (cardLetters.getD c.code '?').toString
+  let dst := match m.dst with
+    | .home => "h"
+    | .cell => "f"
+    | .col j => col j
+  src ++ dst
+
+def testBulk : TestM Unit := do
+  section_ "compact move lists"
+  check "decode examples" (decodeMoves "1h3fAh27".toList ==
+    some [⟨.col 0, .home⟩, ⟨.col 2, .cell⟩, ⟨.cell (card "AC"), .home⟩, ⟨.col 1, .col 6⟩])
+  check "reject bad column" (decodeMoves "9h".toList == none)
+  check "reject odd length" (decodeMoves "1h3".toList == none)
+  let ms := winPath 1
+  let code := String.join (ms.map encodeMove)
+  check "encode/decode round trip" (decodeMoves code.toList == some ms)
+  check "encoded win accepted" (checkWinCode deal1 code)
+  check "truncated win rejected" (!checkWinCode deal1 (code.dropEnd 2).toString)
+  check "win for another deal rejected" (!checkWinCode (msDeal 2) code)
+  check "chunk with skipped deals accepted" (checkDealChunk 1 3 [2, 3] ("\n".intercalate [code, "", "zz"]))
+  check "chunk count mismatch rejected" (!checkDealChunk 1 2 [] code)
+  check "chunk with unchecked bad line rejected" (!checkDealChunk 1 2 [] (code ++ "\n" ++ code))
+
+def testAutoPlay : TestM Unit := do
+  section_ "auto-play"
+  -- the proved policy (`autoPlay`) and the proposer's (`autoHome`) agree on deals and positions one move in
+  let starts := (List.range 300).map (msDeal ·.succ)
+  let positions := starts ++ starts.flatMap moves
+  let bad := positions.filter fun s => autoPlay 52 s != (autoHome 52 s []).1
+  check s!"autoPlay = autoHome on {positions.length} positions" bad.isEmpty s!"{bad.length} differ"
+  let moved := positions.filter fun s => autoPlay 52 s != s
+  check "auto-play moves cards somewhere" (!moved.isEmpty)
+
 def main : IO UInt32 := do
   let ((), t) ← (do
     testValidity
@@ -224,6 +262,8 @@ def main : IO UInt32 := do
     testDifferential
     testClosedControls
     testWinControls
-    testCodec : TestM Unit).run {}
+    testCodec
+    testBulk
+    testAutoPlay : TestM Unit).run {}
   IO.println s!"{t.passed} passed, {t.failed.length} failed"
   return if t.failed.isEmpty then 0 else 1

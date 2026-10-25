@@ -12,3 +12,5 @@ import FreeCell.Verify
 import FreeCell.Driver
 import FreeCell.Propose
 import FreeCell.Supermove
+import FreeCell.AutoPlay
+import FreeCell.Bulk

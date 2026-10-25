@@ -1,0 +1,500 @@
+0 already decided, 32000 to run
+[100/32000] (0%) deal 103 winnable 0.056s  totals {'winnable': 100}
+[200/32000] (0%) deal 206 winnable 0.06s  totals {'winnable': 200}
+[300/32000] (0%) deal 308 winnable 0.06s  totals {'winnable': 300}
+[400/32000] (1%) deal 391 winnable 0.403s  totals {'winnable': 400}
+[500/32000] (1%) deal 509 winnable 0.059s  totals {'winnable': 500}
+[600/32000] (1%) deal 609 winnable 0.062s  totals {'winnable': 600}
+[700/32000] (2%) deal 710 winnable 0.058s  totals {'winnable': 700}
+[800/32000] (2%) deal 805 winnable 0.436s  totals {'winnable': 800}
+[808/32000] (2%) deal 194 unknown 21.149s  totals {'winnable': 807, 'unknown': 1}
+[827/32000] (2%) deal 289 unknown 21.214s  totals {'winnable': 825, 'unknown': 2}
+[855/32000] (2%) deal 385 unknown 21.128s  totals {'winnable': 852, 'unknown': 3}
+[900/32000] (2%) deal 909 winnable 0.062s  totals {'winnable': 897, 'unknown': 3}
+[911/32000] (2%) deal 479 unknown 21.21s  totals {'winnable': 907, 'unknown': 4}
+[967/32000] (3%) deal 559 unknown 21.264s  totals {'winnable': 962, 'unknown': 5}
+[1000/32000] (3%) deal 1010 winnable 0.058s  totals {'winnable': 995, 'unknown': 5}
+[1035/32000] (3%) deal 611 unknown 21.201s  totals {'winnable': 1029, 'unknown': 6}
+[1100/32000] (3%) deal 1107 winnable 0.064s  totals {'winnable': 1094, 'unknown': 6}
+[1200/32000] (3%) deal 1208 winnable 0.064s  totals {'winnable': 1194, 'unknown': 6}
+[1264/32000] (3%) deal 672 unknown 21.103s  totals {'winnable': 1257, 'unknown': 7}
+[1300/32000] (4%) deal 1309 winnable 0.06s  totals {'winnable': 1293, 'unknown': 7}
+[1356/32000] (4%) deal 725 unknown 21.104s  totals {'winnable': 1348, 'unknown': 8}
+[1400/32000] (4%) deal 1410 winnable 0.073s  totals {'winnable': 1392, 'unknown': 8}
+[1489/32000] (4%) deal 792 unknown 21.162s  totals {'winnable': 1480, 'unknown': 9}
+[1500/32000] (4%) deal 1511 winnable 0.062s  totals {'winnable': 1491, 'unknown': 9}
+[1600/32000] (5%) deal 1607 winnable 0.074s  totals {'winnable': 1591, 'unknown': 9}
+[1632/32000] (5%) deal 853 unknown 21.162s  totals {'winnable': 1622, 'unknown': 10}
+[1686/32000] (5%) deal 866 unknown 21.166s  totals {'winnable': 1675, 'unknown': 11}
+[1700/32000] (5%) deal 1706 winnable 0.066s  totals {'winnable': 1689, 'unknown': 11}
+[1800/32000] (5%) deal 1809 winnable 0.069s  totals {'winnable': 1789, 'unknown': 11}
+[1900/32000] (5%) deal 1910 winnable 0.06s  totals {'winnable': 1889, 'unknown': 11}
+[2000/32000] (6%) deal 2010 winnable 0.056s  totals {'winnable': 1989, 'unknown': 11}
+[2100/32000] (6%) deal 2109 winnable 0.056s  totals {'winnable': 2089, 'unknown': 11}
+[2200/32000] (6%) deal 2207 winnable 0.059s  totals {'winnable': 2189, 'unknown': 11}
+[2292/32000] (7%) deal 1433 unknown 20.755s  totals {'winnable': 2280, 'unknown': 12}
+[2300/32000] (7%) deal 2306 winnable 0.104s  totals {'winnable': 2288, 'unknown': 12}
+[2400/32000] (7%) deal 2410 winnable 0.063s  totals {'winnable': 2388, 'unknown': 12}
+[2500/32000] (7%) deal 2510 winnable 0.063s  totals {'winnable': 2488, 'unknown': 12}
+[2506/32000] (7%) deal 1618 unknown 21.244s  totals {'winnable': 2493, 'unknown': 13}
+[2600/32000] (8%) deal 2610 winnable 0.067s  totals {'winnable': 2587, 'unknown': 13}
+[2623/32000] (8%) deal 1784 unknown 21.191s  totals {'winnable': 2609, 'unknown': 14}
+[2700/32000] (8%) deal 2710 winnable 0.067s  totals {'winnable': 2686, 'unknown': 14}
+[2800/32000] (8%) deal 2809 winnable 0.061s  totals {'winnable': 2786, 'unknown': 14}
+[2900/32000] (9%) deal 2905 winnable 0.318s  totals {'winnable': 2886, 'unknown': 14}
+[3000/32000] (9%) deal 3009 winnable 0.059s  totals {'winnable': 2986, 'unknown': 14}
+[3048/32000] (9%) deal 2374 unknown 20.671s  totals {'winnable': 3033, 'unknown': 15}
+[3100/32000] (9%) deal 3111 winnable 0.058s  totals {'winnable': 3085, 'unknown': 15}
+[3101/32000] (9%) deal 2432 unknown 20.744s  totals {'winnable': 3085, 'unknown': 16}
+[3120/32000] (9%) deal 2437 unknown 21.287s  totals {'winnable': 3103, 'unknown': 17}
+[3172/32000] (9%) deal 2468 unknown 21.273s  totals {'winnable': 3154, 'unknown': 18}
+[3200/32000] (10%) deal 3209 winnable 0.062s  totals {'winnable': 3182, 'unknown': 18}
+[3300/32000] (10%) deal 3307 winnable 0.058s  totals {'winnable': 3282, 'unknown': 18}
+[3400/32000] (10%) deal 3409 winnable 0.064s  totals {'winnable': 3382, 'unknown': 18}
+[3500/32000] (10%) deal 3509 winnable 0.061s  totals {'winnable': 3482, 'unknown': 18}
+[3600/32000] (11%) deal 3605 winnable 0.12s  totals {'winnable': 3582, 'unknown': 18}
+[3700/32000] (11%) deal 3709 winnable 0.255s  totals {'winnable': 3682, 'unknown': 18}
+[3708/32000] (11%) deal 2781 unknown 21.208s  totals {'winnable': 3689, 'unknown': 19}
+[3712/32000] (11%) deal 2765 unknown 21.708s  totals {'winnable': 3692, 'unknown': 20}
+[3800/32000] (11%) deal 3806 winnable 0.069s  totals {'winnable': 3780, 'unknown': 20}
+[3900/32000] (12%) deal 3905 winnable 0.096s  totals {'winnable': 3880, 'unknown': 20}
+[4000/32000] (12%) deal 4007 winnable 0.076s  totals {'winnable': 3980, 'unknown': 20}
+[4100/32000] (12%) deal 4104 winnable 0.173s  totals {'winnable': 4080, 'unknown': 20}
+[4200/32000] (13%) deal 4205 winnable 0.065s  totals {'winnable': 4180, 'unknown': 20}
+[4300/32000] (13%) deal 4309 winnable 0.063s  totals {'winnable': 4280, 'unknown': 20}
+[4394/32000] (13%) deal 3343 unknown 21.291s  totals {'winnable': 4373, 'unknown': 21}
+[4400/32000] (13%) deal 4407 winnable 0.062s  totals {'winnable': 4379, 'unknown': 21}
+[4500/32000] (14%) deal 4509 winnable 0.057s  totals {'winnable': 4479, 'unknown': 21}
+[4600/32000] (14%) deal 4608 winnable 0.062s  totals {'winnable': 4579, 'unknown': 21}
+[4700/32000] (14%) deal 4707 winnable 0.061s  totals {'winnable': 4679, 'unknown': 21}
+[4800/32000] (15%) deal 4810 winnable 0.063s  totals {'winnable': 4779, 'unknown': 21}
+[4900/32000] (15%) deal 4908 winnable 0.062s  totals {'winnable': 4879, 'unknown': 21}
+[4907/32000] (15%) deal 3925 unknown 21.139s  totals {'winnable': 4885, 'unknown': 22}
+[5000/32000] (15%) deal 5007 winnable 0.06s  totals {'winnable': 4978, 'unknown': 22}
+[5100/32000] (15%) deal 5108 winnable 0.063s  totals {'winnable': 5078, 'unknown': 22}
+[5200/32000] (16%) deal 5208 winnable 0.06s  totals {'winnable': 5178, 'unknown': 22}
+[5205/32000] (16%) deal 4213 unknown 20.755s  totals {'winnable': 5182, 'unknown': 23}
+[5237/32000] (16%) deal 4232 unknown 21.373s  totals {'winnable': 5213, 'unknown': 24}
+[5300/32000] (16%) deal 5310 winnable 0.069s  totals {'winnable': 5276, 'unknown': 24}
+[5333/32000] (16%) deal 4360 unknown 21.499s  totals {'winnable': 5308, 'unknown': 25}
+[5400/32000] (16%) deal 5409 winnable 0.13s  totals {'winnable': 5375, 'unknown': 25}
+[5500/32000] (17%) deal 5509 winnable 0.081s  totals {'winnable': 5475, 'unknown': 25}
+[5600/32000] (17%) deal 5605 winnable 0.115s  totals {'winnable': 5575, 'unknown': 25}
+[5700/32000] (17%) deal 5708 winnable 0.113s  totals {'winnable': 5675, 'unknown': 25}
+[5800/32000] (18%) deal 5810 winnable 0.057s  totals {'winnable': 5775, 'unknown': 25}
+[5900/32000] (18%) deal 5849 winnable 1.892s  totals {'winnable': 5875, 'unknown': 25}
+[5909/32000] (18%) deal 5174 unknown 21.24s  totals {'winnable': 5883, 'unknown': 26}
+[5992/32000] (18%) deal 5308 unknown 21.455s  totals {'winnable': 5965, 'unknown': 27}
+[6000/32000] (18%) deal 6011 winnable 0.061s  totals {'winnable': 5973, 'unknown': 27}
+[6100/32000] (19%) deal 6110 winnable 0.06s  totals {'winnable': 6073, 'unknown': 27}
+[6200/32000] (19%) deal 6211 winnable 0.057s  totals {'winnable': 6173, 'unknown': 27}
+[6240/32000] (19%) deal 5510 unknown 21.227s  totals {'winnable': 6212, 'unknown': 28}
+[6300/32000] (19%) deal 6310 winnable 0.06s  totals {'winnable': 6272, 'unknown': 28}
+[6400/32000] (20%) deal 6411 winnable 0.064s  totals {'winnable': 6372, 'unknown': 28}
+[6500/32000] (20%) deal 6508 winnable 0.068s  totals {'winnable': 6472, 'unknown': 28}
+[6600/32000] (20%) deal 6608 winnable 0.06s  totals {'winnable': 6572, 'unknown': 28}
+[6700/32000] (20%) deal 6709 winnable 0.058s  totals {'winnable': 6672, 'unknown': 28}
+[6769/32000] (21%) deal 5930 unknown 21.075s  totals {'winnable': 6740, 'unknown': 29}
+[6800/32000] (21%) deal 6810 winnable 0.059s  totals {'winnable': 6771, 'unknown': 29}
+[6805/32000] (21%) deal 5961 unknown 21.093s  totals {'winnable': 6775, 'unknown': 30}
+[6900/32000] (21%) deal 6908 winnable 0.062s  totals {'winnable': 6870, 'unknown': 30}
+[7000/32000] (21%) deal 7003 winnable 0.165s  totals {'winnable': 6970, 'unknown': 30}
+[7032/32000] (21%) deal 6106 unknown 21.187s  totals {'winnable': 7001, 'unknown': 31}
+[7100/32000] (22%) deal 7108 winnable 0.087s  totals {'winnable': 7069, 'unknown': 31}
+[7200/32000] (22%) deal 7204 winnable 0.065s  totals {'winnable': 7169, 'unknown': 31}
+[7300/32000] (22%) deal 7309 winnable 0.064s  totals {'winnable': 7269, 'unknown': 31}
+[7400/32000] (23%) deal 7409 winnable 0.06s  totals {'winnable': 7369, 'unknown': 31}
+[7500/32000] (23%) deal 7510 winnable 0.058s  totals {'winnable': 7469, 'unknown': 31}
+[7600/32000] (23%) deal 7611 winnable 0.057s  totals {'winnable': 7569, 'unknown': 31}
+[7700/32000] (24%) deal 7711 winnable 0.06s  totals {'winnable': 7669, 'unknown': 31}
+[7767/32000] (24%) deal 6947 unknown 21.224s  totals {'winnable': 7735, 'unknown': 32}
+[7772/32000] (24%) deal 6965 unknown 20.694s  totals {'winnable': 7739, 'unknown': 33}
+[7800/32000] (24%) deal 7805 winnable 0.106s  totals {'winnable': 7767, 'unknown': 33}
+[7900/32000] (24%) deal 7910 winnable 0.059s  totals {'winnable': 7867, 'unknown': 33}
+[7905/32000] (24%) deal 7093 unknown 21.238s  totals {'winnable': 7871, 'unknown': 34}
+[8000/32000] (25%) deal 8011 winnable 0.072s  totals {'winnable': 7966, 'unknown': 34}
+[8007/32000] (25%) deal 7310 unknown 20.701s  totals {'winnable': 7972, 'unknown': 35}
+[8038/32000] (25%) deal 7346 unknown 20.691s  totals {'winnable': 8002, 'unknown': 36}
+[8100/32000] (25%) deal 8104 winnable 0.207s  totals {'winnable': 8064, 'unknown': 36}
+[8102/32000] (25%) deal 7359 unknown 21.18s  totals {'winnable': 8065, 'unknown': 37}
+[8128/32000] (25%) deal 7372 unknown 21.143s  totals {'winnable': 8090, 'unknown': 38}
+[8200/32000] (25%) deal 8208 winnable 0.059s  totals {'winnable': 8162, 'unknown': 38}
+[8300/32000] (25%) deal 8309 winnable 0.054s  totals {'winnable': 8262, 'unknown': 38}
+[8400/32000] (26%) deal 8410 winnable 0.064s  totals {'winnable': 8362, 'unknown': 38}
+[8500/32000] (26%) deal 8505 winnable 0.109s  totals {'winnable': 8462, 'unknown': 38}
+[8600/32000] (26%) deal 8602 winnable 0.303s  totals {'winnable': 8562, 'unknown': 38}
+[8645/32000] (27%) deal 7742 unknown 21.087s  totals {'winnable': 8606, 'unknown': 39}
+[8700/32000] (27%) deal 8710 winnable 0.06s  totals {'winnable': 8661, 'unknown': 39}
+[8800/32000] (27%) deal 8810 winnable 0.06s  totals {'winnable': 8761, 'unknown': 39}
+[8863/32000] (27%) deal 7967 unknown 21.106s  totals {'winnable': 8823, 'unknown': 40}
+[8900/32000] (27%) deal 8907 winnable 0.11s  totals {'winnable': 8860, 'unknown': 40}
+[9000/32000] (28%) deal 9010 winnable 0.08s  totals {'winnable': 8960, 'unknown': 40}
+[9006/32000] (28%) deal 8031 unknown 22.166s  totals {'winnable': 8965, 'unknown': 41}
+[9100/32000] (28%) deal 9109 winnable 0.06s  totals {'winnable': 9059, 'unknown': 41}
+[9140/32000] (28%) deal 8253 unknown 21.106s  totals {'winnable': 9098, 'unknown': 42}
+[9200/32000] (28%) deal 9210 winnable 0.061s  totals {'winnable': 9158, 'unknown': 42}
+[9300/32000] (29%) deal 9296 winnable 0.303s  totals {'winnable': 9258, 'unknown': 42}
+[9334/32000] (29%) deal 8520 unknown 21.128s  totals {'winnable': 9291, 'unknown': 43}
+[9400/32000] (29%) deal 9408 winnable 0.101s  totals {'winnable': 9357, 'unknown': 43}
+[9500/32000] (29%) deal 9508 winnable 0.06s  totals {'winnable': 9457, 'unknown': 43}
+[9520/32000] (29%) deal 8653 unknown 21.16s  totals {'winnable': 9476, 'unknown': 44}
+[9600/32000] (30%) deal 9607 winnable 0.109s  totals {'winnable': 9556, 'unknown': 44}
+[9700/32000] (30%) deal 9705 winnable 0.064s  totals {'winnable': 9656, 'unknown': 44}
+[9800/32000] (30%) deal 9776 winnable 0.714s  totals {'winnable': 9756, 'unknown': 44}
+[9900/32000] (30%) deal 9911 winnable 0.151s  totals {'winnable': 9856, 'unknown': 44}
+[9905/32000] (30%) deal 8983 unknown 21.272s  totals {'winnable': 9860, 'unknown': 45}
+[9961/32000] (31%) deal 9094 unknown 21.116s  totals {'winnable': 9915, 'unknown': 46}
+[10000/32000] (31%) deal 10008 winnable 0.058s  totals {'winnable': 9954, 'unknown': 46}
+[10100/32000] (31%) deal 10109 winnable 0.052s  totals {'winnable': 10054, 'unknown': 46}
+[10196/32000] (31%) deal 9352 unknown 21.035s  totals {'winnable': 10149, 'unknown': 47}
+[10200/32000] (31%) deal 10209 winnable 0.064s  totals {'winnable': 10153, 'unknown': 47}
+[10217/32000] (31%) deal 9347 unknown 21.605s  totals {'winnable': 10169, 'unknown': 48}
+[10300/32000] (32%) deal 10310 winnable 0.063s  totals {'winnable': 10252, 'unknown': 48}
+[10400/32000] (32%) deal 10410 winnable 3.041s  totals {'winnable': 10352, 'unknown': 48}
+[10443/32000] (32%) deal 9938 unknown 21.031s  totals {'winnable': 10394, 'unknown': 49}
+[10499/32000] (32%) deal 9991 unknown 21.047s  totals {'winnable': 10449, 'unknown': 50}
+[10500/32000] (32%) deal 10507 winnable 0.108s  totals {'winnable': 10450, 'unknown': 50}
+[10586/32000] (33%) deal 10135 unknown 21.076s  totals {'winnable': 10535, 'unknown': 51}
+[10600/32000] (33%) deal 10608 winnable 0.054s  totals {'winnable': 10549, 'unknown': 51}
+[10630/32000] (33%) deal 10167 unknown 21.127s  totals {'winnable': 10578, 'unknown': 52}
+[10642/32000] (33%) deal 10174 unknown 21.121s  totals {'winnable': 10589, 'unknown': 53}
+[10700/32000] (33%) deal 10639 winnable 1.819s  totals {'winnable': 10647, 'unknown': 53}
+[10751/32000] (33%) deal 10250 unknown 21.303s  totals {'winnable': 10697, 'unknown': 54}
+[10800/32000] (33%) deal 10810 winnable 0.063s  totals {'winnable': 10746, 'unknown': 54}
+[10900/32000] (34%) deal 10909 winnable 0.061s  totals {'winnable': 10846, 'unknown': 54}
+[10983/32000] (34%) deal 10389 unknown 21.082s  totals {'winnable': 10928, 'unknown': 55}
+[11000/32000] (34%) deal 11010 winnable 0.063s  totals {'winnable': 10945, 'unknown': 55}
+[11029/32000] (34%) deal 10404 unknown 21.084s  totals {'winnable': 10973, 'unknown': 56}
+[11100/32000] (34%) deal 11106 winnable 0.064s  totals {'winnable': 11044, 'unknown': 56}
+[11200/32000] (35%) deal 11209 winnable 0.065s  totals {'winnable': 11144, 'unknown': 56}
+[11300/32000] (35%) deal 11308 winnable 0.062s  totals {'winnable': 11244, 'unknown': 56}
+[11400/32000] (35%) deal 11408 winnable 0.059s  totals {'winnable': 11344, 'unknown': 56}
+[11500/32000] (35%) deal 11507 winnable 0.062s  totals {'winnable': 11444, 'unknown': 56}
+[11600/32000] (36%) deal 11611 winnable 0.065s  totals {'winnable': 11544, 'unknown': 56}
+[11661/32000] (36%) deal 10749 unknown 21.11s  totals {'winnable': 11604, 'unknown': 57}
+[11683/32000] (36%) deal 10807 unknown 21.149s  totals {'winnable': 11625, 'unknown': 58}
+[11700/32000] (36%) deal 11710 winnable 0.057s  totals {'winnable': 11642, 'unknown': 58}
+[11701/32000] (36%) deal 10824 unknown 21.176s  totals {'winnable': 11642, 'unknown': 59}
+[11742/32000] (36%) deal 10852 unknown 21.219s  totals {'winnable': 11682, 'unknown': 60}
+[11800/32000] (36%) deal 11806 winnable 0.068s  totals {'winnable': 11740, 'unknown': 60}
+[11900/32000] (37%) deal 11908 winnable 0.062s  totals {'winnable': 11840, 'unknown': 60}
+[12000/32000] (37%) deal 12010 winnable 0.059s  totals {'winnable': 11940, 'unknown': 60}
+[12019/32000] (37%) deal 11230 unknown 21.187s  totals {'winnable': 11958, 'unknown': 61}
+[12089/32000] (37%) deal 11982 unwinnable 4.047s  totals {'winnable': 12027, 'unknown': 61, 'unwinnable': 1}
+[12100/32000] (37%) deal 12110 winnable 0.065s  totals {'winnable': 12038, 'unknown': 61, 'unwinnable': 1}
+[12141/32000] (37%) deal 11389 unknown 21.056s  totals {'winnable': 12078, 'unknown': 62, 'unwinnable': 1}
+[12200/32000] (38%) deal 12210 winnable 0.063s  totals {'winnable': 12137, 'unknown': 62, 'unwinnable': 1}
+[12266/32000] (38%) deal 11573 unknown 21.114s  totals {'winnable': 12202, 'unknown': 63, 'unwinnable': 1}
+[12300/32000] (38%) deal 12310 winnable 0.072s  totals {'winnable': 12236, 'unknown': 63, 'unwinnable': 1}
+[12400/32000] (38%) deal 12411 winnable 0.063s  totals {'winnable': 12336, 'unknown': 63, 'unwinnable': 1}
+[12500/32000] (39%) deal 12510 winnable 0.063s  totals {'winnable': 12436, 'unknown': 63, 'unwinnable': 1}
+[12543/32000] (39%) deal 11817 unknown 21.166s  totals {'winnable': 12478, 'unknown': 64, 'unwinnable': 1}
+[12600/32000] (39%) deal 12607 winnable 0.062s  totals {'winnable': 12535, 'unknown': 64, 'unwinnable': 1}
+[12671/32000] (39%) deal 11928 unknown 21.194s  totals {'winnable': 12605, 'unknown': 65, 'unwinnable': 1}
+[12700/32000] (39%) deal 12709 winnable 0.066s  totals {'winnable': 12634, 'unknown': 65, 'unwinnable': 1}
+[12800/32000] (40%) deal 12807 winnable 0.059s  totals {'winnable': 12734, 'unknown': 65, 'unwinnable': 1}
+[12807/32000] (40%) deal 12003 unknown 21.067s  totals {'winnable': 12740, 'unknown': 66, 'unwinnable': 1}
+[12900/32000] (40%) deal 12909 winnable 0.062s  totals {'winnable': 12833, 'unknown': 66, 'unwinnable': 1}
+[13000/32000] (40%) deal 12957 winnable 1.437s  totals {'winnable': 12933, 'unknown': 66, 'unwinnable': 1}
+[13100/32000] (40%) deal 13076 winnable 0.768s  totals {'winnable': 13033, 'unknown': 66, 'unwinnable': 1}
+[13193/32000] (41%) deal 12244 unknown 21.813s  totals {'winnable': 13125, 'unknown': 67, 'unwinnable': 1}
+[13200/32000] (41%) deal 13208 winnable 0.058s  totals {'winnable': 13132, 'unknown': 67, 'unwinnable': 1}
+[13300/32000] (41%) deal 13310 winnable 0.058s  totals {'winnable': 13232, 'unknown': 67, 'unwinnable': 1}
+[13400/32000] (41%) deal 13408 winnable 0.059s  totals {'winnable': 13332, 'unknown': 67, 'unwinnable': 1}
+[13479/32000] (42%) deal 12642 unknown 21.203s  totals {'winnable': 13410, 'unknown': 68, 'unwinnable': 1}
+[13500/32000] (42%) deal 13509 winnable 0.061s  totals {'winnable': 13431, 'unknown': 68, 'unwinnable': 1}
+[13592/32000] (42%) deal 12835 unknown 21.233s  totals {'winnable': 13522, 'unknown': 69, 'unwinnable': 1}
+[13600/32000] (42%) deal 13611 winnable 0.268s  totals {'winnable': 13530, 'unknown': 69, 'unwinnable': 1}
+[13645/32000] (42%) deal 13010 unknown 21.208s  totals {'winnable': 13574, 'unknown': 70, 'unwinnable': 1}
+[13700/32000] (42%) deal 13708 winnable 0.054s  totals {'winnable': 13629, 'unknown': 70, 'unwinnable': 1}
+[13758/32000] (42%) deal 13138 unknown 21.106s  totals {'winnable': 13686, 'unknown': 71, 'unwinnable': 1}
+[13800/32000] (43%) deal 13807 winnable 0.106s  totals {'winnable': 13728, 'unknown': 71, 'unwinnable': 1}
+[13822/32000] (43%) deal 13213 unknown 21.193s  totals {'winnable': 13749, 'unknown': 72, 'unwinnable': 1}
+[13900/32000] (43%) deal 13908 winnable 0.065s  totals {'winnable': 13827, 'unknown': 72, 'unwinnable': 1}
+[14000/32000] (43%) deal 14008 winnable 0.061s  totals {'winnable': 13927, 'unknown': 72, 'unwinnable': 1}
+[14100/32000] (44%) deal 14105 winnable 0.119s  totals {'winnable': 14027, 'unknown': 72, 'unwinnable': 1}
+[14200/32000] (44%) deal 14211 winnable 0.061s  totals {'winnable': 14127, 'unknown': 72, 'unwinnable': 1}
+[14240/32000] (44%) deal 13514 unknown 20.995s  totals {'winnable': 14166, 'unknown': 73, 'unwinnable': 1}
+[14300/32000] (44%) deal 14310 winnable 0.066s  totals {'winnable': 14226, 'unknown': 73, 'unwinnable': 1}
+[14319/32000] (44%) deal 13599 unknown 21.2s  totals {'winnable': 14244, 'unknown': 74, 'unwinnable': 1}
+[14400/32000] (45%) deal 14410 winnable 0.065s  totals {'winnable': 14325, 'unknown': 74, 'unwinnable': 1}
+[14423/32000] (45%) deal 13752 unknown 21.002s  totals {'winnable': 14347, 'unknown': 75, 'unwinnable': 1}
+[14486/32000] (45%) deal 13831 unknown 20.91s  totals {'winnable': 14409, 'unknown': 76, 'unwinnable': 1}
+[14500/32000] (45%) deal 14507 winnable 0.138s  totals {'winnable': 14423, 'unknown': 76, 'unwinnable': 1}
+[14532/32000] (45%) deal 13886 unknown 20.922s  totals {'winnable': 14454, 'unknown': 77, 'unwinnable': 1}
+[14600/32000] (45%) deal 14609 winnable 0.069s  totals {'winnable': 14522, 'unknown': 77, 'unwinnable': 1}
+[14610/32000] (45%) deal 14034 unknown 21.057s  totals {'winnable': 14531, 'unknown': 78, 'unwinnable': 1}
+[14665/32000] (45%) deal 14177 unknown 22.138s  totals {'winnable': 14585, 'unknown': 79, 'unwinnable': 1}
+[14700/32000] (45%) deal 14709 winnable 0.054s  totals {'winnable': 14620, 'unknown': 79, 'unwinnable': 1}
+[14747/32000] (46%) deal 14262 unknown 20.937s  totals {'winnable': 14666, 'unknown': 80, 'unwinnable': 1}
+[14771/32000] (46%) deal 14278 unknown 20.88s  totals {'winnable': 14689, 'unknown': 81, 'unwinnable': 1}
+[14800/32000] (46%) deal 14810 winnable 0.061s  totals {'winnable': 14718, 'unknown': 81, 'unwinnable': 1}
+[14900/32000] (46%) deal 14910 winnable 0.057s  totals {'winnable': 14818, 'unknown': 81, 'unwinnable': 1}
+[15000/32000] (46%) deal 15009 winnable 0.06s  totals {'winnable': 14918, 'unknown': 81, 'unwinnable': 1}
+[15100/32000] (47%) deal 15110 winnable 0.058s  totals {'winnable': 15018, 'unknown': 81, 'unwinnable': 1}
+[15170/32000] (47%) deal 14587 unknown 20.951s  totals {'winnable': 15087, 'unknown': 82, 'unwinnable': 1}
+[15183/32000] (47%) deal 14596 unknown 20.821s  totals {'winnable': 15099, 'unknown': 83, 'unwinnable': 1}
+[15200/32000] (47%) deal 15209 winnable 0.061s  totals {'winnable': 15116, 'unknown': 83, 'unwinnable': 1}
+[15219/32000] (47%) deal 14613 unknown 20.934s  totals {'winnable': 15134, 'unknown': 84, 'unwinnable': 1}
+[15221/32000] (47%) deal 14616 unknown 20.896s  totals {'winnable': 15135, 'unknown': 85, 'unwinnable': 1}
+[15300/32000] (47%) deal 15305 winnable 0.172s  totals {'winnable': 15214, 'unknown': 85, 'unwinnable': 1}
+[15347/32000] (47%) deal 14640 unknown 21.127s  totals {'winnable': 15260, 'unknown': 86, 'unwinnable': 1}
+[15400/32000] (48%) deal 15409 winnable 0.068s  totals {'winnable': 15313, 'unknown': 86, 'unwinnable': 1}
+[15500/32000] (48%) deal 15502 winnable 0.356s  totals {'winnable': 15413, 'unknown': 86, 'unwinnable': 1}
+[15541/32000] (48%) deal 14758 unknown 21.139s  totals {'winnable': 15453, 'unknown': 87, 'unwinnable': 1}
+[15600/32000] (48%) deal 15607 winnable 0.104s  totals {'winnable': 15512, 'unknown': 87, 'unwinnable': 1}
+[15672/32000] (48%) deal 14930 unknown 21.079s  totals {'winnable': 15583, 'unknown': 88, 'unwinnable': 1}
+[15700/32000] (49%) deal 15709 winnable 0.061s  totals {'winnable': 15611, 'unknown': 88, 'unwinnable': 1}
+[15798/32000] (49%) deal 15099 unknown 21.103s  totals {'winnable': 15708, 'unknown': 89, 'unwinnable': 1}
+[15800/32000] (49%) deal 15809 winnable 0.062s  totals {'winnable': 15710, 'unknown': 89, 'unwinnable': 1}
+[15900/32000] (49%) deal 15894 winnable 0.729s  totals {'winnable': 15810, 'unknown': 89, 'unwinnable': 1}
+[15951/32000] (49%) deal 15337 unknown 21.263s  totals {'winnable': 15860, 'unknown': 90, 'unwinnable': 1}
+[16000/32000] (50%) deal 16007 winnable 0.062s  totals {'winnable': 15909, 'unknown': 90, 'unwinnable': 1}
+[16100/32000] (50%) deal 16109 winnable 0.061s  totals {'winnable': 16009, 'unknown': 90, 'unwinnable': 1}
+[16103/32000] (50%) deal 15441 unknown 21.28s  totals {'winnable': 16011, 'unknown': 91, 'unwinnable': 1}
+[16200/32000] (50%) deal 16207 winnable 0.055s  totals {'winnable': 16108, 'unknown': 91, 'unwinnable': 1}
+[16226/32000] (50%) deal 15528 unknown 21.119s  totals {'winnable': 16133, 'unknown': 92, 'unwinnable': 1}
+[16300/32000] (50%) deal 16309 winnable 0.058s  totals {'winnable': 16207, 'unknown': 92, 'unwinnable': 1}
+[16349/32000] (51%) deal 15664 unknown 21.206s  totals {'winnable': 16255, 'unknown': 93, 'unwinnable': 1}
+[16351/32000] (51%) deal 15672 unknown 21.127s  totals {'winnable': 16256, 'unknown': 94, 'unwinnable': 1}
+[16400/32000] (51%) deal 16406 winnable 0.073s  totals {'winnable': 16305, 'unknown': 94, 'unwinnable': 1}
+[16427/32000] (51%) deal 15723 unknown 21.203s  totals {'winnable': 16331, 'unknown': 95, 'unwinnable': 1}
+[16500/32000] (51%) deal 16507 winnable 0.063s  totals {'winnable': 16404, 'unknown': 95, 'unwinnable': 1}
+[16527/32000] (51%) deal 15770 unknown 21.228s  totals {'winnable': 16430, 'unknown': 96, 'unwinnable': 1}
+[16600/32000] (51%) deal 16608 winnable 0.079s  totals {'winnable': 16503, 'unknown': 96, 'unwinnable': 1}
+[16700/32000] (52%) deal 16710 winnable 0.065s  totals {'winnable': 16603, 'unknown': 96, 'unwinnable': 1}
+[16800/32000] (52%) deal 16808 winnable 0.074s  totals {'winnable': 16703, 'unknown': 96, 'unwinnable': 1}
+[16900/32000] (52%) deal 16886 winnable 2.63s  totals {'winnable': 16803, 'unknown': 96, 'unwinnable': 1}
+[16918/32000] (52%) deal 16229 unknown 21.032s  totals {'winnable': 16820, 'unknown': 97, 'unwinnable': 1}
+[17000/32000] (53%) deal 17008 winnable 0.062s  totals {'winnable': 16902, 'unknown': 97, 'unwinnable': 1}
+[17100/32000] (53%) deal 17106 winnable 0.402s  totals {'winnable': 17002, 'unknown': 97, 'unwinnable': 1}
+[17126/32000] (53%) deal 16426 unknown 21.485s  totals {'winnable': 17027, 'unknown': 98, 'unwinnable': 1}
+[17162/32000] (53%) deal 16572 unknown 21.168s  totals {'winnable': 17062, 'unknown': 99, 'unwinnable': 1}
+[17163/32000] (53%) deal 16569 unknown 21.217s  totals {'winnable': 17062, 'unknown': 100, 'unwinnable': 1}
+[17164/32000] (53%) deal 16571 unknown 21.176s  totals {'winnable': 17062, 'unknown': 101, 'unwinnable': 1}
+[17200/32000] (53%) deal 17184 winnable 0.41s  totals {'winnable': 17098, 'unknown': 101, 'unwinnable': 1}
+[17300/32000] (54%) deal 17308 winnable 0.061s  totals {'winnable': 17198, 'unknown': 101, 'unwinnable': 1}
+[17400/32000] (54%) deal 17408 winnable 0.053s  totals {'winnable': 17298, 'unknown': 101, 'unwinnable': 1}
+[17499/32000] (54%) deal 16819 unknown 21.206s  totals {'winnable': 17396, 'unknown': 102, 'unwinnable': 1}
+[17500/32000] (54%) deal 17508 winnable 0.07s  totals {'winnable': 17397, 'unknown': 102, 'unwinnable': 1}
+[17600/32000] (55%) deal 17608 winnable 0.068s  totals {'winnable': 17497, 'unknown': 102, 'unwinnable': 1}
+[17700/32000] (55%) deal 17708 winnable 0.074s  totals {'winnable': 17597, 'unknown': 102, 'unwinnable': 1}
+[17800/32000] (55%) deal 17809 winnable 0.069s  totals {'winnable': 17697, 'unknown': 102, 'unwinnable': 1}
+[17900/32000] (55%) deal 17907 winnable 0.057s  totals {'winnable': 17797, 'unknown': 102, 'unwinnable': 1}
+[18000/32000] (56%) deal 18009 winnable 0.217s  totals {'winnable': 17897, 'unknown': 102, 'unwinnable': 1}
+[18100/32000] (56%) deal 18110 winnable 0.057s  totals {'winnable': 17997, 'unknown': 102, 'unwinnable': 1}
+[18151/32000] (56%) deal 17204 unknown 21.241s  totals {'winnable': 18047, 'unknown': 103, 'unwinnable': 1}
+[18200/32000] (56%) deal 18208 winnable 0.07s  totals {'winnable': 18096, 'unknown': 103, 'unwinnable': 1}
+[18300/32000] (57%) deal 18309 winnable 0.057s  totals {'winnable': 18196, 'unknown': 103, 'unwinnable': 1}
+[18400/32000] (57%) deal 18410 winnable 0.062s  totals {'winnable': 18296, 'unknown': 103, 'unwinnable': 1}
+[18500/32000] (57%) deal 18509 winnable 0.06s  totals {'winnable': 18396, 'unknown': 103, 'unwinnable': 1}
+[18600/32000] (58%) deal 18610 winnable 0.057s  totals {'winnable': 18496, 'unknown': 103, 'unwinnable': 1}
+[18622/32000] (58%) deal 17785 unknown 20.827s  totals {'winnable': 18517, 'unknown': 104, 'unwinnable': 1}
+[18700/32000] (58%) deal 18709 winnable 0.063s  totals {'winnable': 18595, 'unknown': 104, 'unwinnable': 1}
+[18703/32000] (58%) deal 17863 unknown 21.142s  totals {'winnable': 18597, 'unknown': 105, 'unwinnable': 1}
+[18800/32000] (58%) deal 18810 winnable 0.067s  totals {'winnable': 18694, 'unknown': 105, 'unwinnable': 1}
+[18900/32000] (59%) deal 18909 winnable 0.228s  totals {'winnable': 18794, 'unknown': 105, 'unwinnable': 1}
+[18982/32000] (59%) deal 18251 unknown 21.24s  totals {'winnable': 18875, 'unknown': 106, 'unwinnable': 1}
+[19000/32000] (59%) deal 19009 winnable 0.112s  totals {'winnable': 18893, 'unknown': 106, 'unwinnable': 1}
+[19100/32000] (59%) deal 19109 winnable 0.165s  totals {'winnable': 18993, 'unknown': 106, 'unwinnable': 1}
+[19121/32000] (59%) deal 18487 unknown 20.808s  totals {'winnable': 19013, 'unknown': 107, 'unwinnable': 1}
+[19200/32000] (60%) deal 19208 winnable 0.061s  totals {'winnable': 19092, 'unknown': 107, 'unwinnable': 1}
+[19300/32000] (60%) deal 19310 winnable 0.062s  totals {'winnable': 19192, 'unknown': 107, 'unwinnable': 1}
+[19312/32000] (60%) deal 18692 unknown 20.851s  totals {'winnable': 19203, 'unknown': 108, 'unwinnable': 1}
+[19376/32000] (60%) deal 18722 unknown 20.883s  totals {'winnable': 19266, 'unknown': 109, 'unwinnable': 1}
+[19400/32000] (60%) deal 19407 winnable 0.062s  totals {'winnable': 19290, 'unknown': 109, 'unwinnable': 1}
+[19500/32000] (60%) deal 19509 winnable 0.065s  totals {'winnable': 19390, 'unknown': 109, 'unwinnable': 1}
+[19582/32000] (61%) deal 18827 unknown 21.428s  totals {'winnable': 19471, 'unknown': 110, 'unwinnable': 1}
+[19600/32000] (61%) deal 19610 winnable 0.062s  totals {'winnable': 19489, 'unknown': 110, 'unwinnable': 1}
+[19654/32000] (61%) deal 18873 unknown 20.873s  totals {'winnable': 19542, 'unknown': 111, 'unwinnable': 1}
+[19700/32000] (61%) deal 19708 winnable 0.065s  totals {'winnable': 19588, 'unknown': 111, 'unwinnable': 1}
+[19800/32000] (61%) deal 19807 winnable 0.063s  totals {'winnable': 19688, 'unknown': 111, 'unwinnable': 1}
+[19900/32000] (62%) deal 19908 winnable 0.066s  totals {'winnable': 19788, 'unknown': 111, 'unwinnable': 1}
+[20000/32000] (62%) deal 20010 winnable 0.086s  totals {'winnable': 19888, 'unknown': 111, 'unwinnable': 1}
+[20091/32000] (62%) deal 19102 unknown 21.267s  totals {'winnable': 19978, 'unknown': 112, 'unwinnable': 1}
+[20100/32000] (62%) deal 20109 winnable 0.071s  totals {'winnable': 19987, 'unknown': 112, 'unwinnable': 1}
+[20200/32000] (63%) deal 20208 winnable 0.166s  totals {'winnable': 20087, 'unknown': 112, 'unwinnable': 1}
+[20300/32000] (63%) deal 20309 winnable 0.099s  totals {'winnable': 20187, 'unknown': 112, 'unwinnable': 1}
+[20318/32000] (63%) deal 19466 unknown 21.21s  totals {'winnable': 20204, 'unknown': 113, 'unwinnable': 1}
+[20346/32000] (63%) deal 19547 unknown 21.228s  totals {'winnable': 20231, 'unknown': 114, 'unwinnable': 1}
+[20349/32000] (63%) deal 19577 unknown 20.834s  totals {'winnable': 20233, 'unknown': 115, 'unwinnable': 1}
+[20400/32000] (63%) deal 20409 winnable 0.138s  totals {'winnable': 20284, 'unknown': 115, 'unwinnable': 1}
+[20500/32000] (64%) deal 20510 winnable 0.065s  totals {'winnable': 20384, 'unknown': 115, 'unwinnable': 1}
+[20600/32000] (64%) deal 20610 winnable 0.078s  totals {'winnable': 20484, 'unknown': 115, 'unwinnable': 1}
+[20700/32000] (64%) deal 20710 winnable 0.072s  totals {'winnable': 20584, 'unknown': 115, 'unwinnable': 1}
+[20728/32000] (64%) deal 20031 unknown 20.826s  totals {'winnable': 20611, 'unknown': 116, 'unwinnable': 1}
+[20800/32000] (65%) deal 20810 winnable 0.071s  totals {'winnable': 20683, 'unknown': 116, 'unwinnable': 1}
+[20900/32000] (65%) deal 20904 winnable 0.35s  totals {'winnable': 20783, 'unknown': 116, 'unwinnable': 1}
+[21000/32000] (65%) deal 21010 winnable 0.074s  totals {'winnable': 20883, 'unknown': 116, 'unwinnable': 1}
+[21039/32000] (65%) deal 20313 unknown 20.881s  totals {'winnable': 20921, 'unknown': 117, 'unwinnable': 1}
+[21049/32000] (65%) deal 20315 unknown 20.899s  totals {'winnable': 20930, 'unknown': 118, 'unwinnable': 1}
+[21100/32000] (65%) deal 21109 winnable 0.071s  totals {'winnable': 20981, 'unknown': 118, 'unwinnable': 1}
+[21200/32000] (66%) deal 21210 winnable 0.068s  totals {'winnable': 21081, 'unknown': 118, 'unwinnable': 1}
+[21203/32000] (66%) deal 20509 unknown 21.133s  totals {'winnable': 21083, 'unknown': 119, 'unwinnable': 1}
+[21300/32000] (66%) deal 21307 winnable 0.078s  totals {'winnable': 21180, 'unknown': 119, 'unwinnable': 1}
+[21400/32000] (66%) deal 21410 winnable 0.068s  totals {'winnable': 21280, 'unknown': 119, 'unwinnable': 1}
+[21500/32000] (67%) deal 21509 winnable 0.067s  totals {'winnable': 21380, 'unknown': 119, 'unwinnable': 1}
+[21510/32000] (67%) deal 20824 unknown 21.064s  totals {'winnable': 21389, 'unknown': 120, 'unwinnable': 1}
+[21600/32000] (67%) deal 20920 unknown 21.182s  totals {'winnable': 21478, 'unknown': 121, 'unwinnable': 1}
+[21641/32000] (67%) deal 20980 unknown 21.076s  totals {'winnable': 21518, 'unknown': 122, 'unwinnable': 1}
+[21700/32000] (67%) deal 21708 winnable 0.062s  totals {'winnable': 21577, 'unknown': 122, 'unwinnable': 1}
+[21724/32000] (67%) deal 21039 unknown 21.083s  totals {'winnable': 21600, 'unknown': 123, 'unwinnable': 1}
+[21800/32000] (68%) deal 21811 winnable 0.061s  totals {'winnable': 21676, 'unknown': 123, 'unwinnable': 1}
+[21806/32000] (68%) deal 21151 unknown 21.054s  totals {'winnable': 21681, 'unknown': 124, 'unwinnable': 1}
+[21900/32000] (68%) deal 21910 winnable 0.064s  totals {'winnable': 21775, 'unknown': 124, 'unwinnable': 1}
+[21959/32000] (68%) deal 21452 unknown 21.511s  totals {'winnable': 21833, 'unknown': 125, 'unwinnable': 1}
+[21980/32000] (68%) deal 21512 unknown 20.974s  totals {'winnable': 21853, 'unknown': 126, 'unwinnable': 1}
+[22000/32000] (68%) deal 22009 winnable 0.07s  totals {'winnable': 21873, 'unknown': 126, 'unwinnable': 1}
+[22053/32000] (68%) deal 21554 unknown 21.077s  totals {'winnable': 21925, 'unknown': 127, 'unwinnable': 1}
+[22100/32000] (69%) deal 22108 winnable 0.075s  totals {'winnable': 21972, 'unknown': 127, 'unwinnable': 1}
+[22152/32000] (69%) deal 21611 unknown 20.944s  totals {'winnable': 22023, 'unknown': 128, 'unwinnable': 1}
+[22200/32000] (69%) deal 22203 winnable 0.2s  totals {'winnable': 22071, 'unknown': 128, 'unwinnable': 1}
+[22276/32000] (69%) deal 21721 unknown 20.96s  totals {'winnable': 22146, 'unknown': 129, 'unwinnable': 1}
+[22300/32000] (69%) deal 22304 winnable 0.313s  totals {'winnable': 22170, 'unknown': 129, 'unwinnable': 1}
+[22400/32000] (70%) deal 22407 winnable 0.065s  totals {'winnable': 22270, 'unknown': 129, 'unwinnable': 1}
+[22500/32000] (70%) deal 22509 winnable 0.062s  totals {'winnable': 22370, 'unknown': 129, 'unwinnable': 1}
+[22600/32000] (70%) deal 22589 winnable 0.484s  totals {'winnable': 22470, 'unknown': 129, 'unwinnable': 1}
+[22700/32000] (70%) deal 22708 winnable 0.063s  totals {'winnable': 22570, 'unknown': 129, 'unwinnable': 1}
+[22800/32000] (71%) deal 22809 winnable 0.065s  totals {'winnable': 22670, 'unknown': 129, 'unwinnable': 1}
+[22880/32000] (71%) deal 21959 unknown 21.494s  totals {'winnable': 22749, 'unknown': 130, 'unwinnable': 1}
+[22900/32000] (71%) deal 22907 winnable 0.118s  totals {'winnable': 22769, 'unknown': 130, 'unwinnable': 1}
+[23000/32000] (71%) deal 23007 winnable 0.062s  totals {'winnable': 22869, 'unknown': 130, 'unwinnable': 1}
+[23100/32000] (72%) deal 23107 winnable 0.068s  totals {'winnable': 22969, 'unknown': 130, 'unwinnable': 1}
+[23200/32000] (72%) deal 23207 winnable 0.066s  totals {'winnable': 23069, 'unknown': 130, 'unwinnable': 1}
+[23300/32000] (72%) deal 23307 winnable 0.068s  totals {'winnable': 23169, 'unknown': 130, 'unwinnable': 1}
+[23400/32000] (73%) deal 23410 winnable 0.067s  totals {'winnable': 23269, 'unknown': 130, 'unwinnable': 1}
+[23500/32000] (73%) deal 23509 winnable 0.06s  totals {'winnable': 23369, 'unknown': 130, 'unwinnable': 1}
+[23600/32000] (73%) deal 23610 winnable 0.077s  totals {'winnable': 23469, 'unknown': 130, 'unwinnable': 1}
+[23601/32000] (73%) deal 22776 unknown 20.872s  totals {'winnable': 23469, 'unknown': 131, 'unwinnable': 1}
+[23700/32000] (74%) deal 23708 winnable 0.063s  totals {'winnable': 23568, 'unknown': 131, 'unwinnable': 1}
+[23710/32000] (74%) deal 22841 unknown 21.323s  totals {'winnable': 23577, 'unknown': 132, 'unwinnable': 1}
+[23749/32000] (74%) deal 22894 unknown 20.826s  totals {'winnable': 23615, 'unknown': 133, 'unwinnable': 1}
+[23800/32000] (74%) deal 23789 winnable 0.488s  totals {'winnable': 23666, 'unknown': 133, 'unwinnable': 1}
+[23900/32000] (74%) deal 23908 winnable 0.061s  totals {'winnable': 23766, 'unknown': 133, 'unwinnable': 1}
+[24000/32000] (75%) deal 24008 winnable 0.062s  totals {'winnable': 23866, 'unknown': 133, 'unwinnable': 1}
+[24049/32000] (75%) deal 23126 unknown 20.897s  totals {'winnable': 23914, 'unknown': 134, 'unwinnable': 1}
+[24100/32000] (75%) deal 24111 winnable 0.064s  totals {'winnable': 23965, 'unknown': 134, 'unwinnable': 1}
+[24119/32000] (75%) deal 23334 unknown 20.95s  totals {'winnable': 23983, 'unknown': 135, 'unwinnable': 1}
+[24200/32000] (75%) deal 24209 winnable 0.056s  totals {'winnable': 24064, 'unknown': 135, 'unwinnable': 1}
+[24221/32000] (75%) deal 23418 unknown 21.213s  totals {'winnable': 24084, 'unknown': 136, 'unwinnable': 1}
+[24300/32000] (75%) deal 24307 winnable 0.058s  totals {'winnable': 24163, 'unknown': 136, 'unwinnable': 1}
+[24400/32000] (76%) deal 24406 winnable 0.063s  totals {'winnable': 24263, 'unknown': 136, 'unwinnable': 1}
+[24500/32000] (76%) deal 24508 winnable 0.072s  totals {'winnable': 24363, 'unknown': 136, 'unwinnable': 1}
+[24600/32000] (76%) deal 24608 winnable 0.064s  totals {'winnable': 24463, 'unknown': 136, 'unwinnable': 1}
+[24700/32000] (77%) deal 24708 winnable 0.182s  totals {'winnable': 24563, 'unknown': 136, 'unwinnable': 1}
+[24800/32000] (77%) deal 24808 winnable 0.064s  totals {'winnable': 24663, 'unknown': 136, 'unwinnable': 1}
+[24900/32000] (77%) deal 24910 winnable 0.06s  totals {'winnable': 24763, 'unknown': 136, 'unwinnable': 1}
+[25000/32000] (78%) deal 25010 winnable 0.062s  totals {'winnable': 24863, 'unknown': 136, 'unwinnable': 1}
+[25030/32000] (78%) deal 24106 unknown 20.957s  totals {'winnable': 24892, 'unknown': 137, 'unwinnable': 1}
+[25100/32000] (78%) deal 25109 winnable 0.063s  totals {'winnable': 24962, 'unknown': 137, 'unwinnable': 1}
+[25125/32000] (78%) deal 24130 unknown 21.386s  totals {'winnable': 24986, 'unknown': 138, 'unwinnable': 1}
+[25200/32000] (78%) deal 25210 winnable 0.06s  totals {'winnable': 25061, 'unknown': 138, 'unwinnable': 1}
+[25247/32000] (78%) deal 24327 unknown 21.009s  totals {'winnable': 25107, 'unknown': 139, 'unwinnable': 1}
+[25300/32000] (79%) deal 25309 winnable 0.059s  totals {'winnable': 25160, 'unknown': 139, 'unwinnable': 1}
+[25365/32000] (79%) deal 24564 unknown 20.859s  totals {'winnable': 25224, 'unknown': 140, 'unwinnable': 1}
+[25400/32000] (79%) deal 25408 winnable 0.058s  totals {'winnable': 25259, 'unknown': 140, 'unwinnable': 1}
+[25500/32000] (79%) deal 25508 winnable 0.06s  totals {'winnable': 25359, 'unknown': 140, 'unwinnable': 1}
+[25600/32000] (80%) deal 25599 winnable 0.255s  totals {'winnable': 25459, 'unknown': 140, 'unwinnable': 1}
+[25700/32000] (80%) deal 25709 winnable 0.063s  totals {'winnable': 25559, 'unknown': 140, 'unwinnable': 1}
+[25743/32000] (80%) deal 24901 unknown 21.234s  totals {'winnable': 25601, 'unknown': 141, 'unwinnable': 1}
+[25800/32000] (80%) deal 25808 winnable 0.077s  totals {'winnable': 25658, 'unknown': 141, 'unwinnable': 1}
+[25900/32000] (80%) deal 25908 winnable 0.081s  totals {'winnable': 25758, 'unknown': 141, 'unwinnable': 1}
+[25926/32000] (81%) deal 25036 unknown 20.732s  totals {'winnable': 25783, 'unknown': 142, 'unwinnable': 1}
+[26000/32000] (81%) deal 26005 winnable 0.121s  totals {'winnable': 25857, 'unknown': 142, 'unwinnable': 1}
+[26100/32000] (81%) deal 26109 winnable 0.068s  totals {'winnable': 25957, 'unknown': 142, 'unwinnable': 1}
+[26102/32000] (81%) deal 25154 unknown 21.256s  totals {'winnable': 25958, 'unknown': 143, 'unwinnable': 1}
+[26200/32000] (81%) deal 26208 winnable 0.128s  totals {'winnable': 26056, 'unknown': 143, 'unwinnable': 1}
+[26300/32000] (82%) deal 26310 winnable 0.066s  totals {'winnable': 26156, 'unknown': 143, 'unwinnable': 1}
+[26343/32000] (82%) deal 25328 unknown 21.212s  totals {'winnable': 26198, 'unknown': 144, 'unwinnable': 1}
+[26400/32000] (82%) deal 26408 winnable 0.059s  totals {'winnable': 26255, 'unknown': 144, 'unwinnable': 1}
+[26500/32000] (82%) deal 26509 winnable 0.058s  totals {'winnable': 26355, 'unknown': 144, 'unwinnable': 1}
+[26600/32000] (83%) deal 26609 winnable 0.117s  totals {'winnable': 26455, 'unknown': 144, 'unwinnable': 1}
+[26619/32000] (83%) deal 25563 unknown 22.434s  totals {'winnable': 26473, 'unknown': 145, 'unwinnable': 1}
+[26700/32000] (83%) deal 26691 winnable 0.521s  totals {'winnable': 26554, 'unknown': 145, 'unwinnable': 1}
+[26767/32000] (83%) deal 25759 unknown 21.468s  totals {'winnable': 26620, 'unknown': 146, 'unwinnable': 1}
+[26800/32000] (83%) deal 26805 winnable 0.115s  totals {'winnable': 26653, 'unknown': 146, 'unwinnable': 1}
+[26900/32000] (84%) deal 26906 winnable 0.106s  totals {'winnable': 26753, 'unknown': 146, 'unwinnable': 1}
+[27000/32000] (84%) deal 27009 winnable 0.066s  totals {'winnable': 26853, 'unknown': 146, 'unwinnable': 1}
+[27100/32000] (84%) deal 27107 winnable 0.074s  totals {'winnable': 26953, 'unknown': 146, 'unwinnable': 1}
+[27186/32000] (84%) deal 26309 unknown 21.367s  totals {'winnable': 27038, 'unknown': 147, 'unwinnable': 1}
+[27200/32000] (85%) deal 27209 winnable 0.072s  totals {'winnable': 27052, 'unknown': 147, 'unwinnable': 1}
+[27206/32000] (85%) deal 26344 unknown 20.796s  totals {'winnable': 27057, 'unknown': 148, 'unwinnable': 1}
+[27300/32000] (85%) deal 27307 winnable 0.071s  totals {'winnable': 27151, 'unknown': 148, 'unwinnable': 1}
+[27400/32000] (85%) deal 27408 winnable 0.071s  totals {'winnable': 27251, 'unknown': 148, 'unwinnable': 1}
+[27500/32000] (85%) deal 27508 winnable 0.072s  totals {'winnable': 27351, 'unknown': 148, 'unwinnable': 1}
+[27600/32000] (86%) deal 27602 winnable 0.342s  totals {'winnable': 27451, 'unknown': 148, 'unwinnable': 1}
+[27700/32000] (86%) deal 27707 winnable 0.06s  totals {'winnable': 27551, 'unknown': 148, 'unwinnable': 1}
+[27800/32000] (86%) deal 27797 winnable 0.367s  totals {'winnable': 27651, 'unknown': 148, 'unwinnable': 1}
+[27846/32000] (87%) deal 26927 unknown 20.816s  totals {'winnable': 27696, 'unknown': 149, 'unwinnable': 1}
+[27900/32000] (87%) deal 27911 winnable 0.06s  totals {'winnable': 27750, 'unknown': 149, 'unwinnable': 1}
+[28000/32000] (87%) deal 28010 winnable 0.062s  totals {'winnable': 27850, 'unknown': 149, 'unwinnable': 1}
+[28012/32000] (87%) deal 27101 unknown 21.212s  totals {'winnable': 27861, 'unknown': 150, 'unwinnable': 1}
+[28100/32000] (87%) deal 28107 winnable 0.104s  totals {'winnable': 27949, 'unknown': 150, 'unwinnable': 1}
+[28131/32000] (87%) deal 27233 unknown 20.995s  totals {'winnable': 27979, 'unknown': 151, 'unwinnable': 1}
+[28200/32000] (88%) deal 28209 winnable 0.057s  totals {'winnable': 28048, 'unknown': 151, 'unwinnable': 1}
+[28300/32000] (88%) deal 28309 winnable 0.062s  totals {'winnable': 28148, 'unknown': 151, 'unwinnable': 1}
+[28354/32000] (88%) deal 27493 unknown 20.918s  totals {'winnable': 28201, 'unknown': 152, 'unwinnable': 1}
+[28355/32000] (88%) deal 27492 unknown 20.927s  totals {'winnable': 28201, 'unknown': 153, 'unwinnable': 1}
+[28400/32000] (88%) deal 28343 winnable 1.165s  totals {'winnable': 28246, 'unknown': 153, 'unwinnable': 1}
+[28500/32000] (89%) deal 28511 winnable 0.062s  totals {'winnable': 28346, 'unknown': 153, 'unwinnable': 1}
+[28511/32000] (89%) deal 27721 unknown 21.319s  totals {'winnable': 28356, 'unknown': 154, 'unwinnable': 1}
+[28600/32000] (89%) deal 28608 winnable 0.063s  totals {'winnable': 28445, 'unknown': 154, 'unwinnable': 1}
+[28700/32000] (89%) deal 28710 winnable 0.057s  totals {'winnable': 28545, 'unknown': 154, 'unwinnable': 1}
+[28701/32000] (89%) deal 28140 unknown 21.359s  totals {'winnable': 28545, 'unknown': 155, 'unwinnable': 1}
+[28797/32000] (89%) deal 28316 unknown 21.329s  totals {'winnable': 28640, 'unknown': 156, 'unwinnable': 1}
+[28800/32000] (90%) deal 28807 winnable 0.157s  totals {'winnable': 28643, 'unknown': 156, 'unwinnable': 1}
+[28852/32000] (90%) deal 28406 unknown 20.84s  totals {'winnable': 28694, 'unknown': 157, 'unwinnable': 1}
+[28876/32000] (90%) deal 28437 unknown 20.859s  totals {'winnable': 28717, 'unknown': 158, 'unwinnable': 1}
+[28900/32000] (90%) deal 28910 winnable 0.061s  totals {'winnable': 28741, 'unknown': 158, 'unwinnable': 1}
+[28987/32000] (90%) deal 28502 unknown 21.219s  totals {'winnable': 28827, 'unknown': 159, 'unwinnable': 1}
+[29000/32000] (90%) deal 29008 winnable 0.057s  totals {'winnable': 28840, 'unknown': 159, 'unwinnable': 1}
+[29100/32000] (90%) deal 29110 winnable 0.061s  totals {'winnable': 28940, 'unknown': 159, 'unwinnable': 1}
+[29185/32000] (91%) deal 28595 unknown 21.174s  totals {'winnable': 29024, 'unknown': 160, 'unwinnable': 1}
+[29200/32000] (91%) deal 29197 winnable 0.937s  totals {'winnable': 29039, 'unknown': 160, 'unwinnable': 1}
+[29222/32000] (91%) deal 28646 unknown 21.144s  totals {'winnable': 29060, 'unknown': 161, 'unwinnable': 1}
+[29300/32000] (91%) deal 29308 winnable 0.063s  totals {'winnable': 29138, 'unknown': 161, 'unwinnable': 1}
+[29301/32000] (91%) deal 28686 unknown 21.184s  totals {'winnable': 29138, 'unknown': 162, 'unwinnable': 1}
+[29400/32000] (91%) deal 29407 winnable 0.166s  totals {'winnable': 29237, 'unknown': 162, 'unwinnable': 1}
+[29460/32000] (92%) deal 28722 unknown 21.202s  totals {'winnable': 29296, 'unknown': 163, 'unwinnable': 1}
+[29500/32000] (92%) deal 29511 winnable 0.066s  totals {'winnable': 29336, 'unknown': 163, 'unwinnable': 1}
+[29600/32000] (92%) deal 29608 winnable 0.066s  totals {'winnable': 29436, 'unknown': 163, 'unwinnable': 1}
+[29700/32000] (92%) deal 29707 winnable 0.067s  totals {'winnable': 29536, 'unknown': 163, 'unwinnable': 1}
+[29800/32000] (93%) deal 29803 winnable 0.116s  totals {'winnable': 29636, 'unknown': 163, 'unwinnable': 1}
+[29900/32000] (93%) deal 29908 winnable 0.063s  totals {'winnable': 29736, 'unknown': 163, 'unwinnable': 1}
+[29903/32000] (93%) deal 29001 unknown 20.736s  totals {'winnable': 29738, 'unknown': 164, 'unwinnable': 1}
+[30000/32000] (93%) deal 30010 winnable 0.113s  totals {'winnable': 29835, 'unknown': 164, 'unwinnable': 1}
+[30047/32000] (93%) deal 29218 unknown 21.921s  totals {'winnable': 29881, 'unknown': 165, 'unwinnable': 1}
+[30100/32000] (94%) deal 30110 winnable 0.061s  totals {'winnable': 29934, 'unknown': 165, 'unwinnable': 1}
+[30144/32000] (94%) deal 29410 unknown 21.295s  totals {'winnable': 29977, 'unknown': 166, 'unwinnable': 1}
+[30200/32000] (94%) deal 30207 winnable 0.162s  totals {'winnable': 30033, 'unknown': 166, 'unwinnable': 1}
+[30233/32000] (94%) deal 29552 unknown 20.752s  totals {'winnable': 30065, 'unknown': 167, 'unwinnable': 1}
+[30300/32000] (94%) deal 30310 winnable 0.06s  totals {'winnable': 30132, 'unknown': 167, 'unwinnable': 1}
+[30355/32000] (94%) deal 29675 unknown 21.2s  totals {'winnable': 30186, 'unknown': 168, 'unwinnable': 1}
+[30400/32000] (95%) deal 30410 winnable 0.071s  totals {'winnable': 30231, 'unknown': 168, 'unwinnable': 1}
+[30491/32000] (95%) deal 29912 unknown 21.283s  totals {'winnable': 30321, 'unknown': 169, 'unwinnable': 1}
+[30500/32000] (95%) deal 30509 winnable 0.067s  totals {'winnable': 30330, 'unknown': 169, 'unwinnable': 1}
+[30531/32000] (95%) deal 29938 unknown 21.287s  totals {'winnable': 30360, 'unknown': 170, 'unwinnable': 1}
+[30600/32000] (95%) deal 30609 winnable 0.073s  totals {'winnable': 30429, 'unknown': 170, 'unwinnable': 1}
+[30676/32000] (95%) deal 30021 unknown 20.713s  totals {'winnable': 30504, 'unknown': 171, 'unwinnable': 1}
+[30700/32000] (95%) deal 30707 winnable 0.065s  totals {'winnable': 30528, 'unknown': 171, 'unwinnable': 1}
+[30800/32000] (96%) deal 30809 winnable 0.073s  totals {'winnable': 30628, 'unknown': 171, 'unwinnable': 1}
+[30900/32000] (96%) deal 30908 winnable 0.066s  totals {'winnable': 30728, 'unknown': 171, 'unwinnable': 1}
+[31000/32000] (96%) deal 31008 winnable 0.112s  totals {'winnable': 30828, 'unknown': 171, 'unwinnable': 1}
+[31094/32000] (97%) deal 30328 unknown 20.887s  totals {'winnable': 30921, 'unknown': 172, 'unwinnable': 1}
+[31100/32000] (97%) deal 31110 winnable 0.057s  totals {'winnable': 30927, 'unknown': 172, 'unwinnable': 1}
+[31200/32000] (97%) deal 31209 winnable 0.075s  totals {'winnable': 31027, 'unknown': 172, 'unwinnable': 1}
+[31300/32000] (97%) deal 31305 winnable 0.121s  totals {'winnable': 31127, 'unknown': 172, 'unwinnable': 1}
+[31339/32000] (97%) deal 30524 unknown 21.85s  totals {'winnable': 31165, 'unknown': 173, 'unwinnable': 1}
+[31354/32000] (97%) deal 30585 unknown 21.33s  totals {'winnable': 31179, 'unknown': 174, 'unwinnable': 1}
+[31400/32000] (98%) deal 31410 winnable 0.075s  totals {'winnable': 31225, 'unknown': 174, 'unwinnable': 1}
+[31468/32000] (98%) deal 30761 unknown 21.242s  totals {'winnable': 31292, 'unknown': 175, 'unwinnable': 1}
+[31500/32000] (98%) deal 31510 winnable 0.096s  totals {'winnable': 31324, 'unknown': 175, 'unwinnable': 1}
+[31600/32000] (98%) deal 31610 winnable 0.065s  totals {'winnable': 31424, 'unknown': 175, 'unwinnable': 1}
+[31700/32000] (99%) deal 31705 winnable 0.12s  totals {'winnable': 31524, 'unknown': 175, 'unwinnable': 1}
+[31800/32000] (99%) deal 31810 winnable 0.071s  totals {'winnable': 31624, 'unknown': 175, 'unwinnable': 1}
+[31900/32000] (99%) deal 31909 winnable 0.066s  totals {'winnable': 31724, 'unknown': 175, 'unwinnable': 1}
+[31993/32000] (99%) deal 31334 unknown 21.198s  totals {'winnable': 31816, 'unknown': 176, 'unwinnable': 1}
+[31997/32000] (99%) deal 31433 unknown 21.044s  totals {'winnable': 31819, 'unknown': 177, 'unwinnable': 1}
+[31998/32000] (99%) deal 31541 unknown 21.045s  totals {'winnable': 31819, 'unknown': 178, 'unwinnable': 1}
+[31999/32000] (99%) deal 31780 unknown 20.794s  totals {'winnable': 31819, 'unknown': 179, 'unwinnable': 1}
+[32000/32000] (100%) deal 31825 unknown 21.213s  totals {'winnable': 31819, 'unknown': 180, 'unwinnable': 1}

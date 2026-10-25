@@ -33,3 +33,13 @@ open FreeCell
 #check @superReachable_iff
 #print axioms Supermove.reachable
 #print axioms superReachable_iff
+
+#check @SafeStep.winsIn
+#check @SafeStep.winnable
+#check @autoWinnable_iff
+#check @autoWinnable_autoPlay_iff
+#print axioms SafeStep.winsIn
+#print axioms SafeStep.winnable
+#print axioms SafeStep.winnable_iff
+#print axioms autoWinnable_iff
+#print axioms autoWinnable_autoPlay_iff

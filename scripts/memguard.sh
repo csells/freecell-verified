@@ -34,6 +34,7 @@ while kill -0 "$root" 2>/dev/null; do
     wait "$root" 2>/dev/null
     exit 137
   fi
-  sleep 0.5
+  # poll quickly at first so short commands are not delayed
+  if [ "${polls:=0}" -lt 40 ]; then sleep 0.02; polls=$((polls + 1)); else sleep 0.5; fi
 done
 wait "$root"

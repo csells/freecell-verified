@@ -104,7 +104,7 @@ def runProposer (start : State) (lim : Limits) (t0 : Nat) : IO ProposerResult :=
         if let some why ← limitReached lim t0 p.seen.size then return .stopped why p.seen.size
         if p.expanded ≥ lim.proposerBudget then return .gaveUp p.seen.size
         match p.run (min chunkSize (lim.proposerBudget - p.expanded)) lim.maxPositions with
-        | .found ms => return .found ms p.seen.size
+        | .found ms n => return .found ms n
         | .exhausted => return .gaveUp p.seen.size
         | .more p' => loop rounds p'
     loop (lim.proposerBudget / chunkSize + 2) p0
