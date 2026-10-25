@@ -28,7 +28,7 @@ All theorems below are checked by Lean with no `sorry` and depend only on Lean's
     theorem ms32000_winnable_iff (n : Nat) (h1 : 1 ≤ n) (h2 : n ≤ 32000) :
         (∃ t, Reachable (msDeal n) t ∧ t.Won) ↔ n ≠ 11982
 
-Of the original 32,000 Microsoft deals, #11982 is the only one that cannot be won (`Examples/Ms32000.lean`). Every other deal has a stored winning move list, 5.3 million single-card moves in all, which Lean replays through `checkWin` when the file is built. #11982 is settled by the complete search. This theorem uses `native_decide` for those evaluations: 33 axioms, one for each of the 32 blocks of 1,000 deals and one for #11982. It therefore trusts Lean's compiler as well as its kernel. How the move lists were found (our proposer for 31,926 deals, Freecell Solver for the hardest 73) does not matter to the proof; see `specs/evidence/ms32000/`.
+Of the original 32,000 Microsoft deals, #11982 is the only one that cannot be won (`Examples/Ms32000.lean`). Every other deal has a stored winning move list, 5.3 million single-card moves in all, which Lean replays through `checkWin` when the file is built. #11982 is settled by the complete search. This theorem uses `native_decide` for those evaluations: 33 axioms, one for each of the 32 blocks of 1,000 deals and one for #11982. It therefore trusts Lean's compiler and the compiled code it runs (the checker and the `String` functions that split the stored data), as well as the kernel. As a cross-check, `Examples/Ms32000Kernel.lean` checks the stored wins of 15 of the deals with Lean's kernel alone (`decide +kernel`). Those theorems use only the standard axioms. The 15 are named deals, the neighbours of #11982, block boundaries and deals solved by Freecell Solver. `scripts/check-long.sh` checks every one of these axiom sets exactly, regenerates the data from the archived solver output, and confirms that a tampered block fails. How the move lists were found (our proposer for 31,926 deals, Freecell Solver for the hardest 73) does not matter to the proof; see `specs/evidence/ms32000/`.
 
 `winnable` is defined by well-founded recursion — no fuel, no `partial` — so termination is part of the definition being accepted.
 
@@ -44,7 +44,7 @@ Of the original 32,000 Microsoft deals, #11982 is the only one that cannot be wo
 Requires [elan](https://github.com/leanprover/elan); `lean-toolchain` pins Lean 4.35.0.
 
     lake build                 # library and the freecell executable
-    scripts/check.sh           # forbidden constructs, axioms, Lean tests, CLI tests (~4 minutes)
+    scripts/check.sh           # memory-guard tests, forbidden constructs, axioms, Lean tests, CLI tests (~4 minutes)
     scripts/check-long.sh      # original #11982 proof, native_decide corollaries incl. all 32,000 deals, deal parity (~15 minutes; needs cc)
 
 ## Using the solver

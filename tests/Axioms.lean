@@ -43,3 +43,8 @@ open FreeCell
 #print axioms SafeStep.winnable_iff
 #print axioms autoWinnable_iff
 #print axioms autoWinnable_autoPlay_iff
+
+#check @checkWinCode_sound
+#check @checkDealChunk_sound
+#print axioms checkWinCode_sound
+#print axioms checkDealChunk_sound

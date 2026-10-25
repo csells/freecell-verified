@@ -53,68 +53,68 @@ theorem ms32000_winnable_iff (n : Nat) (h1 : 1 ≤ n) (h2 : n ≤ 32000) :
     exact deal11982_unwinnable hw
   · intro hne
     by_cases c1 : n < 1001
-    · exact chunk01 n (by omega) (by omega) (by simp [hne])
+    · exact chunk01 n (by omega) (by omega) (by simp)
     by_cases c2 : n < 2001
-    · exact chunk02 n (by omega) (by omega) (by simp [hne])
+    · exact chunk02 n (by omega) (by omega) (by simp)
     by_cases c3 : n < 3001
-    · exact chunk03 n (by omega) (by omega) (by simp [hne])
+    · exact chunk03 n (by omega) (by omega) (by simp)
     by_cases c4 : n < 4001
-    · exact chunk04 n (by omega) (by omega) (by simp [hne])
+    · exact chunk04 n (by omega) (by omega) (by simp)
     by_cases c5 : n < 5001
-    · exact chunk05 n (by omega) (by omega) (by simp [hne])
+    · exact chunk05 n (by omega) (by omega) (by simp)
     by_cases c6 : n < 6001
-    · exact chunk06 n (by omega) (by omega) (by simp [hne])
+    · exact chunk06 n (by omega) (by omega) (by simp)
     by_cases c7 : n < 7001
-    · exact chunk07 n (by omega) (by omega) (by simp [hne])
+    · exact chunk07 n (by omega) (by omega) (by simp)
     by_cases c8 : n < 8001
-    · exact chunk08 n (by omega) (by omega) (by simp [hne])
+    · exact chunk08 n (by omega) (by omega) (by simp)
     by_cases c9 : n < 9001
-    · exact chunk09 n (by omega) (by omega) (by simp [hne])
+    · exact chunk09 n (by omega) (by omega) (by simp)
     by_cases c10 : n < 10001
-    · exact chunk10 n (by omega) (by omega) (by simp [hne])
+    · exact chunk10 n (by omega) (by omega) (by simp)
     by_cases c11 : n < 11001
-    · exact chunk11 n (by omega) (by omega) (by simp [hne])
+    · exact chunk11 n (by omega) (by omega) (by simp)
     by_cases c12 : n < 12001
     · exact chunk12 n (by omega) (by omega) (by simp [hne])
     by_cases c13 : n < 13001
-    · exact chunk13 n (by omega) (by omega) (by simp [hne])
+    · exact chunk13 n (by omega) (by omega) (by simp)
     by_cases c14 : n < 14001
-    · exact chunk14 n (by omega) (by omega) (by simp [hne])
+    · exact chunk14 n (by omega) (by omega) (by simp)
     by_cases c15 : n < 15001
-    · exact chunk15 n (by omega) (by omega) (by simp [hne])
+    · exact chunk15 n (by omega) (by omega) (by simp)
     by_cases c16 : n < 16001
-    · exact chunk16 n (by omega) (by omega) (by simp [hne])
+    · exact chunk16 n (by omega) (by omega) (by simp)
     by_cases c17 : n < 17001
-    · exact chunk17 n (by omega) (by omega) (by simp [hne])
+    · exact chunk17 n (by omega) (by omega) (by simp)
     by_cases c18 : n < 18001
-    · exact chunk18 n (by omega) (by omega) (by simp [hne])
+    · exact chunk18 n (by omega) (by omega) (by simp)
     by_cases c19 : n < 19001
-    · exact chunk19 n (by omega) (by omega) (by simp [hne])
+    · exact chunk19 n (by omega) (by omega) (by simp)
     by_cases c20 : n < 20001
-    · exact chunk20 n (by omega) (by omega) (by simp [hne])
+    · exact chunk20 n (by omega) (by omega) (by simp)
     by_cases c21 : n < 21001
-    · exact chunk21 n (by omega) (by omega) (by simp [hne])
+    · exact chunk21 n (by omega) (by omega) (by simp)
     by_cases c22 : n < 22001
-    · exact chunk22 n (by omega) (by omega) (by simp [hne])
+    · exact chunk22 n (by omega) (by omega) (by simp)
     by_cases c23 : n < 23001
-    · exact chunk23 n (by omega) (by omega) (by simp [hne])
+    · exact chunk23 n (by omega) (by omega) (by simp)
     by_cases c24 : n < 24001
-    · exact chunk24 n (by omega) (by omega) (by simp [hne])
+    · exact chunk24 n (by omega) (by omega) (by simp)
     by_cases c25 : n < 25001
-    · exact chunk25 n (by omega) (by omega) (by simp [hne])
+    · exact chunk25 n (by omega) (by omega) (by simp)
     by_cases c26 : n < 26001
-    · exact chunk26 n (by omega) (by omega) (by simp [hne])
+    · exact chunk26 n (by omega) (by omega) (by simp)
     by_cases c27 : n < 27001
-    · exact chunk27 n (by omega) (by omega) (by simp [hne])
+    · exact chunk27 n (by omega) (by omega) (by simp)
     by_cases c28 : n < 28001
-    · exact chunk28 n (by omega) (by omega) (by simp [hne])
+    · exact chunk28 n (by omega) (by omega) (by simp)
     by_cases c29 : n < 29001
-    · exact chunk29 n (by omega) (by omega) (by simp [hne])
+    · exact chunk29 n (by omega) (by omega) (by simp)
     by_cases c30 : n < 30001
-    · exact chunk30 n (by omega) (by omega) (by simp [hne])
+    · exact chunk30 n (by omega) (by omega) (by simp)
     by_cases c31 : n < 31001
-    · exact chunk31 n (by omega) (by omega) (by simp [hne])
-    exact chunk32 n (by omega) (by omega) (by simp [hne])
+    · exact chunk31 n (by omega) (by omega) (by simp)
+    exact chunk32 n (by omega) (by omega) (by simp)
 
 end FreeCell.Examples.Ms32000
 

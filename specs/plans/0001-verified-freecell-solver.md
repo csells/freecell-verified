@@ -128,4 +128,16 @@ Acceptance: a theorem stating exactly which of deals 1–32000 are winnable, who
   - `SafeStep.winnable_iff`: a safe foundation move (an ace or a two, or a card whose opposite-colour foundations are at most one rank lower) preserves winnability. It also never lengthens the shortest win (`SafeStep.winsIn`).
   - `autoWinnable_iff`: for any auto-play policy that only makes safe moves, the forced-auto-play game has exactly the winnable starts of standard FreeCell.
   - `autoWinnable_autoPlay_iff` instantiates it with a concrete policy. That policy agrees with the proposer's `autoHome` on 300 deals and the positions one move into them (`FreeCellTest`, section "auto-play").
+- Kernel cross-check: `Examples/Ms32000Kernel.lean` checks 15 of the stored wins with `decide +kernel` (standard axioms only), cross-checking the compiled evaluation.
+- Adversarial review: `specs/reviews/0003-ms32000-autoplay-and-tooling.md`. Three independent reviewers found no wrong verdict and no flaw in the proofs. All nine findings, about tooling, tests and docs, are resolved there.
+- Verification after the fixes (logs `specs/evidence/m6/check-review0003.log` and `check-long-review0003.log`):
+  - `scripts/check.sh`: memguard tests 17/17; the forbidden-construct checker flags all 24 fixtures, with no hits in the sources; 22 axiom reports, all standard; Lean tests 94/94; e2e 63/63.
+  - `scripts/check-long.sh`:
+    - the original proof is identical;
+    - `ms32000_winnable_iff` has exactly the 3 standard plus 33 `native_decide` axioms;
+    - all 15 kernel-checked deals use only `propext` and `Quot.sound`;
+    - the regenerated files are identical;
+    - a tampered chunk is rejected by `native_decide`;
+    - the 32,000 deal layouts are identical.
+  - The axiom checker itself rejects a dropped chunk axiom, an extra axiom, `sorryAx` in a kernel deal and a missing report.
 - Not verified: Microsoft's exact auto-play rule. If it only ever plays safe cards in this sense, `autoWinnable_iff` covers it; we found no primary documentation of the rule.

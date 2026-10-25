@@ -1,0 +1,97 @@
+Build completed successfully (41 jobs).
+== original #11982 proof (expect 84767 and its native_decide axiom)
+[["JD", "KD", "2S", "4C", "3S", "6D", "6S"],
+ ["2D", "KC", "KS", "5C", "TD", "8S", "9C"],
+ ["9H", "9S", "9D", "TS", "4S", "8D", "2H"],
+ ["JC", "5S", "QD", "QH", "TH", "QS", "6H"],
+ ["5D", "AD", "JS", "4H", "8H", "6C"],
+ ["7H", "QC", "AS", "AC", "2C", "3D"],
+ ["7C", "KH", "AH", "4D", "JH", "8C"],
+ ["5H", "3H", "3C", "7S", "7D", "TC"]]
+[["AH", "3D", "KD", "JC", "6C", "JD", "KC"],
+ ["AS", "3H", "6H", "5D", "2C", "7D", "8D"],
+ ["4H", "QS", "5S", "5C", "TH", "8H", "2S"],
+ ["AC", "QC", "4D", "8C", "QH", "9C", "3S"],
+ ["2D", "8S", "9H", "9D", "6D", "2H"],
+ ["6S", "7H", "JH", "TD", "TC", "QD"],
+ ["TS", "AD", "9S", "KH", "4S", "4C"],
+ ["JS", "KS", "3C", "7C", "7S", "5H"]]
+84767
+'freecell_11982_unwinnable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ certificate_ok._native.native_decide.ax_1_1]
+identical to original-run.log
+== deal corollaries: native_decide results and the kernel-checked sample
+ℹ [52/55] Replayed Examples.Ms32000Kernel
+info: Examples/Ms32000Kernel.lean:2813:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal1' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2814:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal2' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2815:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal617' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2816:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal1000' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2817:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal1001' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2818:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal1941' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2819:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal11981' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2820:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal11983' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2821:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal31999' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2822:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal32000' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2823:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal853' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2824:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal4213' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2825:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal4232' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2826:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal5174' depends on axioms: [propext, Quot.sound]
+info: Examples/Ms32000Kernel.lean:2827:0: 'FreeCell.Examples.Ms32000Kernel.kernel_deal5308' depends on axioms: [propext, Quot.sound]
+ℹ [53/55] Replayed Examples.Deals
+info: Examples/Deals.lean:24:0: 'FreeCell.Examples.deal11982_unwinnable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ FreeCell.Examples.deal11982_unwinnable._native.native_decide.ax_1_1]
+info: Examples/Deals.lean:25:0: 'FreeCell.Examples.deal1_winnable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ FreeCell.Examples.deal1_winnable._native.native_decide.ax_1_1]
+ℹ [54/55] Replayed Examples.Ms32000
+info: Examples/Ms32000.lean:121:0: 'FreeCell.Examples.Ms32000.ms32000_winnable_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ FreeCell.Examples.Ms32000.chunk01._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk02._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk03._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk04._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk05._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk06._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk07._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk08._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk09._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk10._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk11._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk12._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk13._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk14._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk15._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk16._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk17._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk18._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk19._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk20._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk21._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk22._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk23._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk24._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk25._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk26._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk27._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk28._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk29._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk30._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk31._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.chunk32._native.native_decide.ax_1_1,
+ FreeCell.Examples.Ms32000.deal11982_unwinnable._native.native_decide.ax_1_1]
+Build completed successfully (55 jobs).
+axioms as expected: ms32000_winnable_iff has the 3 standard + 33 native_decide axioms; 15 kernel-checked deals use only the standard axioms
+== the 32,000-deal data regenerates from the archived solver output
+32 chunks, 31999 deals, 5287846 moves
+kernel sample: 15 deals
+regenerated files identical
+== tamper control: a chunk missing one move must not check
+tampered chunk rejected by native_decide
+== deal layout parity with Freecell Solver's generator, deals 1-32000
+32000 deals identical

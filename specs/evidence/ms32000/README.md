@@ -23,7 +23,7 @@ Median solve times: pass 1 0.064 s (slowest win 20.9 s); pass 2 112 s (slowest 2
 
 Proposer binary: built from commit `6c6cca8` plus the uncommitted proposer changes of this milestone (run moves expanded into single-card moves, column-order canonical dedup). Its sha256 is `be6798d028852956cebe489ccfb380f84c107fe6c306bb96af9d755bc229b081`.
 
-Freecell Solver was built locally from release tarballs under `scratch/fc-solve/`:
+The converter now verifies each list with `freecell verify` before recording it as winnable. The 73 lists here were verified the same way by a separate script at the time. Freecell Solver was built locally from release tarballs under `scratch/fc-solve/`:
 
 | Artifact | sha256 |
 |---|---|
@@ -36,9 +36,24 @@ Dependencies: CMake 4.4.4 and cpanminus from Homebrew; Template-Toolkit, `six` a
 ## Files
 
 - `pass1.jsonl.gz`, `pass2.jsonl.gz`, `pass3-fcsolve.jsonl.gz`: every result line, with full move lists, as written by `tests/tools/solve_range.py` and `tests/tools/fcsolve_moves.py`. `pass*.progress` are their progress logs.
-- Regenerate the Lean data with `python3 tests/tools/gen_bulk.py Examples/Ms32000 <(gzip -dc pass1.jsonl.gz) <(gzip -dc pass2.jsonl.gz) <(gzip -dc pass3-fcsolve.jsonl.gz)`. Later files override earlier ones.
+- To regenerate the Lean data, run this from the repository root (later files override earlier ones):
+
+      E=specs/evidence/ms32000
+      python3 tests/tools/gen_bulk.py Examples/Ms32000 <(gzip -dc $E/pass1.jsonl.gz) \
+        <(gzip -dc $E/pass2.jsonl.gz) <(gzip -dc $E/pass3-fcsolve.jsonl.gz)
+
+  `scripts/check-long.sh` regenerates into a temporary directory on every run and requires byte-identical output.
 
 ## Controls
+
+`scripts/check-long.sh` runs these on every run:
+
+- It regenerates `Examples/Ms32000*`, as above, and requires byte-identical files.
+- It builds a copy of Chunk07 with one move removed and requires the failure to be `native_decide` evaluating the check to false.
+- It compares the axioms of `ms32000_winnable_iff` with the exact expected set (`tests/tools/check_axioms.py`).
+- Kernel cross-check: `Examples/Ms32000Kernel.lean` checks the stored wins of 15 deals with Lean's kernel (`decide +kernel`) and no compiled code. The deals are #1, #2, #617, #1000, #1001, #1941, #11981, #11983, #31999, #32000, and five of the deals solved by Freecell Solver. These theorems use only the standard axioms; `check_axioms.py` enforces that.
+
+Earlier one-off checks:
 
 - Tampering: dropping the last move of deal 6001's line in a copy of Chunk07 makes `native_decide` evaluate `checkDealChunk 6001 1000 [] data07 = true` to false, and the build fails. The unmodified chunk checks from scratch in 0.9 s.
 - `FreeCellTest` section "compact move lists": round trip of the encoding; truncated wins, wins for another deal, a wrong line count and an unskipped bad line are all rejected.

@@ -1,0 +1,1 @@
+opaque o : Nat

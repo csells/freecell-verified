@@ -4,8 +4,9 @@ Untrusted glue. For each deal it runs `freecell deal N`, solves the board with f
 (`-p -t -sam`, which prints the position after every move), derives each move from the
 difference between consecutive positions, and expands multi-card moves into single-card
 moves through the free cells and empty columns. The resulting move list is only a
-proposal: the Lean `checkWin` decides whether it wins (via `freecell verify` here, and
-again when the bulk theorem is built).
+proposal. Each one is written as a certificate and checked with `freecell verify` (the
+proved `checkWin`); only an accepted list is recorded as winnable (exit 0). The Lean build
+of the bulk theorem checks every list again.
 
 Writes JSON lines in the format of solve_range.py, with "engine": "fc-solve".
 Usage: python3 tests/tools/fcsolve_moves.py FC_SOLVE FREECELL OUT.jsonl DEAL [DEAL ...]
@@ -126,8 +127,27 @@ def solve(fc_solve, freecell, deal):
     g = Game(pos[0])
     for a, b in zip(pos, pos[1:]):
         g.apply(a, b)
-    assert g.home == [13] * 4
-    return {'result': 'winnable', 'engine': 'fc-solve', 'moveCount': len(g.moves), 'moves': g.moves}
+    if g.home != [13] * 4:
+        raise ValueError('converted moves do not end in a won position')
+    verdict = verify(freecell, deal, g.moves)
+    if verdict != 'accepted':
+        return {'result': 'error', 'error': 'freecell verify rejected the converted moves: ' + verdict}
+    return {'result': 'winnable', 'engine': 'fc-solve', 'verified': True,
+            'moveCount': len(g.moves), 'moves': g.moves}
+
+def verify(freecell, deal, moves):
+    """Check a move list with the proved checker via `freecell verify`; 'accepted' or the reason."""
+    start = subprocess.run([freecell, 'deals', str(deal), str(deal)], capture_output=True, text=True,
+                           check=True).stdout.split(' ', 1)[1].strip()
+    cert = ('freecell-verified certificate v1\nrules: standard-freecell/single-card/4-cells/v1\n'
+            f'start: {start}\nwinnable: {len(moves)}\n' + ''.join(m + '\n' for m in moves))
+    with tempfile.NamedTemporaryFile('w', suffix='.cert', delete=False) as f:
+        f.write(cert)
+    try:
+        v = subprocess.run([freecell, 'verify', '--deal', str(deal), f.name], capture_output=True, text=True)
+    finally:
+        os.unlink(f.name)
+    return 'accepted' if v.returncode == 0 else (v.stdout + v.stderr).strip()
 
 if __name__ == '__main__':
     fc_solve, freecell, out = sys.argv[1:4]

@@ -4,7 +4,7 @@ import FreeCell.Supermove
 # Safe automatic foundation moves
 
 Microsoft FreeCell, like many implementations, plays some foundation moves
-automatically. This file proves that playing a *safe* foundation move never
+automatically (its exact rule is not formalised here). This file proves that playing a *safe* foundation move never
 turns a winnable position into an unwinnable one, and never lengthens the
 shortest win. A card is safe to send home when it is an ace or a two, or when
 both foundations of the opposite colour have reached at least one rank below it:
@@ -678,8 +678,10 @@ theorem autoPlay_safeChain : ∀ (n : Nat) (s : State), SafeChain s (autoPlay n 
     · rename_i t ht; exact .head (autoMove?_safeStep ht) (autoPlay_safeChain n t)
     · exact .refl
 
-/-- **Microsoft-style auto-play**: with `autoPlay 52` forced at the start and after every move,
-exactly the standard-winnable valid deals are won. -/
+/-- **Forced safe auto-play, a concrete policy**: with `autoPlay 52` (play the first safe card,
+columns then cells, repeatedly) forced at the start and after every move, exactly the
+standard-winnable valid positions are won. Whether Microsoft's own rule is a safe policy in
+this sense is not established here; `autoWinnable_iff` covers any rule that is. -/
 theorem autoWinnable_autoPlay_iff {start : State} (hv : start.Valid) :
     AutoWinnable (autoPlay 52) (autoPlay 52 start) ↔ Winnable start :=
   autoWinnable_iff (fun s _ => autoPlay_safeChain 52 s) hv

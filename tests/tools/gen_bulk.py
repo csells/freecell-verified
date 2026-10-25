@@ -1,7 +1,16 @@
-"""Generate Examples/Ms32000/*.lean from solve_range.py results.
+"""Generate the Lean files of the 32,000-deal theorem from solver results.
 
 Untrusted glue: every encoded move list is re-checked by `checkWin` inside Lean
 (`checkDealChunk`), so a wrong or missing solution makes the build fail, not lie.
+
+Writes OUTDIR/Chunk01.lean … Chunk32.lean, and beside OUTDIR the headline theorem
+(Ms32000.lean) and a kernel-checked sample (Ms32000Kernel.lean): for the deals in
+KERNEL_SAMPLE the stored win is checked by Lean's kernel (`decide +kernel`), with no
+`native_decide`, cross-checking the compiled evaluation the chunks rely on.
+OUTDIR must be named Ms32000 (normally Examples/Ms32000).
+
+Only decided results count: exit status 0, result "winnable" and a non-empty move
+list. Generation stops if any deal 1–32000 other than 11982 lacks one.
 
 Usage: python3 tests/tools/gen_bulk.py OUTDIR RESULTS.jsonl [RESULTS.jsonl ...]
 Later files override earlier ones for the same deal.
@@ -11,29 +20,63 @@ import json, os, sys
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 RANKS, SUITS = 'A23456789TJQK', 'CDHS'
 LO, HI, CHUNK, UNWINNABLE = 1, 32000, 1000, 11982
+# famous deals, the neighbours of 11982, chunk boundaries, and deals solved by fc-solve
+KERNEL_SAMPLE = [1, 2, 617, 1000, 1001, 1941, 11981, 11983, 31999, 32000, 853, 4213, 4232, 5174, 5308]
 
-def card_letter(name):
-    rank = RANKS.index(name[:-1] if name[:-1] != '10' else 'T') + 1
-    return LETTERS[(rank - 1) * 4 + SUITS.index(name[-1])]
+def parse_card(name):
+    r = name[:-1]
+    if r == '10': r = 'T'
+    if r not in RANKS or len(name) < 2 or name[-1] not in SUITS:
+        raise ValueError(f'bad card {name!r}')
+    return RANKS.index(r) + 1, SUITS.index(name[-1])
+
+def parse_move(move):
+    """'c3 h' / 'c3 c5' / 'c3 f' / 'f:QS c2' -> ((kind, x), (kind, y)), 0-based columns."""
+    parts = move.split()
+    if len(parts) != 2: raise ValueError(f'bad move {move!r}')
+    src, dst = parts
+    if src.startswith('f:'): s = ('cell', parse_card(src[2:]))
+    elif src[:1] == 'c' and src[1:] in list('12345678'): s = ('col', int(src[1:]) - 1)
+    else: raise ValueError(f'bad move source {move!r}')
+    if dst == 'h': d = ('home', None)
+    elif dst == 'f': d = ('cell', None)
+    elif dst[:1] == 'c' and dst[1:] in list('12345678'): d = ('col', int(dst[1:]) - 1)
+    else: raise ValueError(f'bad move destination {move!r}')
+    return s, d
 
 def encode(move):
-    src, dst = move.split()
-    s = src[1:] if src.startswith('c') else card_letter(src[2:])
-    d = {'h': 'h', 'f': 'f'}.get(dst) or dst[1:]
-    assert len(s) == 1 and len(d) == 1, move
+    (sk, sx), (dk, dx) = parse_move(move)
+    s = str(sx + 1) if sk == 'col' else LETTERS[(sx[0] - 1) * 4 + sx[1]]
+    d = {'home': 'h', 'cell': 'f'}.get(dk) or str(dx + 1)
     return s + d
 
+def lean_move(move):
+    (sk, sx), (dk, dx) = parse_move(move)
+    s = f'.col {sx}' if sk == 'col' else f'.cell ⟨{sx[0]}, {sx[1]}⟩'
+    d = {'home': '.home', 'cell': '.cell'}.get(dk) or f'.col {dx}'
+    return f'⟨{s}, {d}⟩'
+
 out_dir, files = sys.argv[1], sys.argv[2:]
-sol = {}
+if os.path.basename(os.path.normpath(out_dir)) != 'Ms32000':
+    sys.exit(f'OUTDIR must be a directory named Ms32000, got {out_dir!r}')
+if not files:
+    sys.exit('give at least one results file')
+moves = {}
 for path in files:
-    for line in open(path):
-        r = json.loads(line)
-        o = r['output']
-        if o.get('result') == 'winnable':
-            sol[r['deal']] = ''.join(encode(m) for m in o['moves'])
-missing = [g for g in range(LO, HI + 1) if g not in sol and g != UNWINNABLE]
+    for n, line in enumerate(open(path), 1):
+        try:
+            r = json.loads(line)
+        except ValueError:
+            sys.exit(f'{path}:{n}: not a JSON line')
+        o = r.get('output', {})
+        if r.get('exit') == 0 and o.get('result') == 'winnable' and o.get('moves'):
+            moves[r['deal']] = o['moves']
+missing = [g for g in range(LO, HI + 1) if g not in moves and g != UNWINNABLE]
 if missing:
     sys.exit(f'{len(missing)} deals lack a winning move list, e.g. {missing[:20]}')
+if UNWINNABLE in moves:
+    sys.exit(f'deal {UNWINNABLE} has a winning move list; the theorem would be wrong')
+sol = {g: ''.join(encode(m) for m in ms) for g, ms in moves.items()}
 
 os.makedirs(out_dir, exist_ok=True)
 names = []
@@ -68,15 +111,17 @@ print(f'{len(names)} chunks, {len(sol)} deals, {total} moves', file=sys.stderr)
 # The headline theorem: every deal 1..32000 is decided.
 cases = []
 for k, (name, lo, hi) in enumerate(names, 1):
-    tail = 'exact' if k == len(names) else None
+    skip_proof = '(by simp [hne])' if lo <= UNWINNABLE <= hi else '(by simp)'
     if k < len(names):
         cases.append(f'    by_cases c{k} : n < {hi + 1}\n'
-                     f'    · exact chunk{k:02d} n (by omega) (by omega) (by simp [hne])')
+                     f'    · exact chunk{k:02d} n (by omega) (by omega) {skip_proof}')
     else:
-        cases.append(f'    exact chunk{k:02d} n (by omega) (by omega) (by simp [hne])')
+        cases.append(f'    exact chunk{k:02d} n (by omega) (by omega) {skip_proof}')
 imports = '\n'.join(['import FreeCell'] + [f'import Examples.Ms32000.{name}' for name, _, _ in names])
 body = '\n'.join(cases)
-open(os.path.join(out_dir, '..', 'Ms32000.lean'), 'w').write(f'''{imports}
+parent = os.path.dirname(os.path.normpath(out_dir)) or '.'
+with open(os.path.join(parent, 'Ms32000.lean'), 'w') as f:
+    f.write(f'''{imports}
 
 /-!
 # Every Microsoft deal 1–32000
@@ -104,3 +149,28 @@ end FreeCell.Examples.Ms32000
 
 #print axioms FreeCell.Examples.Ms32000.ms32000_winnable_iff
 ''')
+
+# Kernel-checked sample: the same stored wins, checked without native_decide.
+thms = []
+for g in KERNEL_SAMPLE:
+    ms = ',\n      '.join(lean_move(m) for m in moves[g])
+    thms.append(f'''theorem kernel_deal{g} : ∃ t, Reachable (msDeal {g}) t ∧ t.Won :=
+  checkWin_sound (ms := [
+      {ms}]) (by decide +kernel)''')
+with open(os.path.join(parent, 'Ms32000Kernel.lean'), 'w') as f:
+    f.write('''import FreeCell
+
+/-!
+# Kernel-checked sample of the 32,000-deal theorem
+
+Generated by `tests/tools/gen_bulk.py`; do not edit. For each deal below, the winning
+move list stored for the 32,000-deal theorem is checked by Lean's kernel
+(`decide +kernel`) instead of compiled code, so these theorems use only the standard
+axioms. They cross-check the `native_decide` evaluation that `Examples/Ms32000` relies on.
+-/
+
+namespace FreeCell.Examples.Ms32000Kernel
+
+''' + '\n\n'.join(thms) + '\n\nend FreeCell.Examples.Ms32000Kernel\n\n' +
+            '\n'.join(f'#print axioms FreeCell.Examples.Ms32000Kernel.kernel_deal{g}' for g in KERNEL_SAMPLE) + '\n')
+print(f'kernel sample: {len(KERNEL_SAMPLE)} deals', file=sys.stderr)

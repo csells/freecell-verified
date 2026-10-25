@@ -151,9 +151,11 @@ def cmdSolve (o : Opts) : CliM UInt32 := do
       inputError s!"certificate file {p} already exists; choose a new path"
   let ⟨start, hv⟩ ← requestedStart o
   let r ← solveBounded start hv o.limits
+  -- the effective position limit, so callers (and tests) can see the default cap
+  let limitJ := ("maxPositions", match o.limits.maxPositions with | some n => toJson n | none => Json.null)
   match r with
   | .unknown reason n =>
-    emit o (Json.mkObj [("result", toJson ("unknown")), ("reason", toJson (reason)), ("explored", toJson (n))])
+    emit o (Json.mkObj [("result", toJson ("unknown")), ("reason", toJson (reason)), ("explored", toJson (n)), limitJ])
       s!"unknown: {reason} after visiting {n} positions (this is not an impossibility proof)\n"
     return 3
   | .decided out engine n =>
@@ -174,14 +176,14 @@ def cmdSolve (o : Opts) : CliM UInt32 := do
       emit o (Json.mkObj ([("result", toJson ("winnable")), ("moveCount", toJson (ms.length)),
           ("engine", toJson engine.name), ("explored", toJson (n)),
           ("certificate", toJson (match o.certificate with | some p => Json.str p | none => Json.null)),
-          ("certificateVerified", if o.certificate.isSome then toJson verified else Json.null)] ++ movesJ))
+          ("certificateVerified", if o.certificate.isSome then toJson verified else Json.null), limitJ] ++ movesJ))
         (s!"winnable: {ms.length} moves (found by the {engine.name} search, checked)\n" ++
           (if o.moves then String.join (ms.map (showMove · ++ "\n")) else ""))
     | .lose c _ =>
       emit o (Json.mkObj [("result", toJson ("unwinnable")), ("closedSetSize", toJson (c.size)),
           ("engine", toJson engine.name),
           ("certificate", toJson (match o.certificate with | some p => Json.str p | none => Json.null)),
-          ("certificateVerified", if o.certificate.isSome then toJson verified else Json.null)])
+          ("certificateVerified", if o.certificate.isSome then toJson verified else Json.null), limitJ])
         s!"unwinnable: every reachable position explored ({c.size} positions)\n"
     return 0
 

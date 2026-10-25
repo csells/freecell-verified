@@ -1,8 +1,10 @@
 """Solve Microsoft deals FROM..TO in parallel with the freecell CLI; resumable.
 
 Untrusted batch glue. Appends one JSON line per deal to OUT ({"deal", "exit", "seconds",
-"output"}), skipping deals already recorded there with a decided result. Every solve runs
-under scripts/memguard.sh. Progress lines go to stderr.
+"output"}), skipping deals already recorded there with a decided result (exit 0 and result
+"winnable" or "unwinnable"). A torn last line from an interrupted run is ignored. With
+--only-from, only deals not decided in that earlier file are run (including deals it lacks).
+Every solve runs under scripts/memguard.sh. Progress lines go to stderr.
 
 Usage: python3 tests/tools/solve_range.py FROM TO OUT [--workers N] [--time-limit S]
        [--mem-mb MB] [--binary PATH] [--proposer-budget N] [--max-positions N]
@@ -20,21 +22,30 @@ ap.add_argument('--mem-mb', type=int, default=4096)
 ap.add_argument('--binary', default=os.path.join(root, '.lake/build/bin/freecell'))
 ap.add_argument('--proposer-budget', type=int, default=None)
 ap.add_argument('--max-positions', type=int, default=None)
-ap.add_argument('--only-from', default=None, help='JSONL whose undecided deals are the only ones to run')
+ap.add_argument('--only-from', default=None, help='run only deals this earlier JSONL did not decide')
 ap.add_argument('--full-priority', action='store_true', help='do not lower CPU priority')
 a = ap.parse_args()
 if not a.full_priority:
     os.nice(19)  # workers inherit this: leave the machine responsive for other work
 
-done = set()
-if os.path.exists(a.out):
-    for line in open(a.out):
-        r = json.loads(line)
-        if r['exit'] == 0: done.add(r['deal'])
+def decided(path):
+    """Deals with a decided result in a results file; unreadable lines are skipped."""
+    out = set()
+    for n, line in enumerate(open(path), 1):
+        try:
+            r = json.loads(line)
+        except ValueError:
+            print(f'{path}:{n}: ignoring an unreadable line', file=sys.stderr)
+            continue
+        if r.get('exit') == 0 and r.get('output', {}).get('result') in ('winnable', 'unwinnable'):
+            out.add(r['deal'])
+    return out
+
+done = decided(a.out) if os.path.exists(a.out) else set()
 todo = [g for g in range(a.lo, a.hi + 1) if g not in done]
 if a.only_from:
-    retry = {json.loads(l)['deal'] for l in open(a.only_from) if json.loads(l)['exit'] != 0}
-    todo = [g for g in todo if g in retry]
+    earlier = decided(a.only_from)
+    todo = [g for g in todo if g not in earlier]
 print(f'{len(done)} already decided, {len(todo)} to run', file=sys.stderr, flush=True)
 
 def solve(g):
@@ -49,6 +60,8 @@ def solve(g):
     return {'deal': g, 'exit': p.returncode, 'seconds': round(time.time() - t0, 3), 'output': out}
 
 counts = {}
+if os.path.exists(a.out) and os.path.getsize(a.out) and not open(a.out, 'rb').read().endswith(b'\n'):
+    with open(a.out, 'a') as f: f.write('\n')  # terminate a torn last line before appending
 with open(a.out, 'a') as f, ThreadPoolExecutor(a.workers) as ex:
     futs = [ex.submit(solve, g) for g in todo]
     for i, fut in enumerate(as_completed(futs), 1):

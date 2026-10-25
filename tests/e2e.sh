@@ -116,6 +116,9 @@ s=$(run solve --deal 1 --deal 2); expect "repeated option" 2 "$s" "$W/out" "more
 s=$(run solve --deal 11982 --max-positions unlimited); expect "explicitly unlimited" 0 "$s" "$W/out" "unwinnable"
 s=$(run solve --deal 1 --max-positions unbounded); expect "bad position limit" 2 "$s" "$W/out" "natural number"
 s=$(run help); expect "default position cap documented" 0 "$s" "$W/out" "default 10000000"
+s=$(run solve --deal 1 --json); expect "default position cap in effect" 0 "$s" "$W/out" '"maxPositions":10000000'
+s=$(run solve --deal 1 --json --max-positions unlimited); expect "unlimited removes the cap" 0 "$s" "$W/out" '"maxPositions":null'
+s=$(run solve --deal 11982 --json --max-positions 5); expect "explicit cap in effect" 3 "$s" "$W/out" '"maxPositions":5'
 s=$(run verify --position - -); expect "stdin twice" 2 "$s" "$W/out" "standard input"
 
 echo "$pass passed, $fail failed"

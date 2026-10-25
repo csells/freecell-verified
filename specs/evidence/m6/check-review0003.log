@@ -1,0 +1,16 @@
+17 passed, 0 failed
+Build completed successfully (41 jobs).
+forbidden constructs: none (checker flags all 24 fixtures)
+axioms: only propext, Classical.choice, Quot.sound (22 theorems)
+Build completed successfully (42 jobs).
+== validity
+== decision procedure
+== differential against the #11982 reference rules
+   distinct edges: ours 314366, reference 314366 (independent Python baseline: 314366)
+== unwinnable certificate controls (fresh, against new checker)
+== winning path controls
+== text formats
+== compact move lists
+== auto-play
+94 passed, 0 failed
+63 passed, 0 failed

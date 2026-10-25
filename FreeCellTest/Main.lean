@@ -242,7 +242,9 @@ def testBulk : TestM Unit := do
   check "truncated win rejected" (!checkWinCode deal1 (code.dropEnd 2).toString)
   check "win for another deal rejected" (!checkWinCode (msDeal 2) code)
   check "chunk with skipped deals accepted" (checkDealChunk 1 3 [2, 3] ("\n".intercalate [code, "", "zz"]))
-  check "chunk count mismatch rejected" (!checkDealChunk 1 2 [] code)
+  check "chunk with a missing line rejected" (!checkDealChunk 1 2 [] code)
+  -- only the line count can reject this: the one deal it claims is checked correctly
+  check "chunk with an extra line rejected" (!checkDealChunk 1 1 [] (code ++ "\nzz"))
   check "chunk with unchecked bad line rejected" (!checkDealChunk 1 2 [] (code ++ "\n" ++ code))
 
 def testAutoPlay : TestM Unit := do
