@@ -1,0 +1,100 @@
+{"deal":1,"exit":0,"seconds":1.373,"output":{"certificate":null,"certificateVerified":false,"explored":17762,"moveCount":1478,"result":"winnable"}}
+{"deal":2,"exit":3,"seconds":12.189,"output":{"explored":1575866,"reason":"time limit reached","result":"unknown"}}
+{"deal":3,"exit":0,"seconds":0.34,"output":{"certificate":null,"certificateVerified":false,"explored":129501,"moveCount":7520,"result":"winnable"}}
+{"deal":4,"exit":3,"seconds":10.388,"output":{"explored":619545,"reason":"time limit reached","result":"unknown"}}
+{"deal":5,"exit":3,"seconds":10.462,"output":{"explored":680006,"reason":"time limit reached","result":"unknown"}}
+{"deal":6,"exit":0,"seconds":0.356,"output":{"certificate":null,"certificateVerified":false,"explored":131568,"moveCount":10725,"result":"winnable"}}
+{"deal":7,"exit":3,"seconds":10.51,"output":{"explored":690159,"reason":"time limit reached","result":"unknown"}}
+{"deal":8,"exit":3,"seconds":10.538,"output":{"explored":714055,"reason":"time limit reached","result":"unknown"}}
+{"deal":9,"exit":3,"seconds":10.68,"output":{"explored":927734,"reason":"time limit reached","result":"unknown"}}
+{"deal":10,"exit":0,"seconds":4.86,"output":{"certificate":null,"certificateVerified":false,"explored":318482,"moveCount":3280,"result":"winnable"}}
+{"deal":11,"exit":0,"seconds":0.085,"output":{"certificate":null,"certificateVerified":false,"explored":24979,"moveCount":1813,"result":"winnable"}}
+{"deal":12,"exit":0,"seconds":0.389,"output":{"certificate":null,"certificateVerified":false,"explored":120569,"moveCount":11650,"result":"winnable"}}
+{"deal":13,"exit":0,"seconds":6.98,"output":{"certificate":null,"certificateVerified":false,"explored":563899,"moveCount":52238,"result":"winnable"}}
+{"deal":14,"exit":0,"seconds":0.605,"output":{"certificate":null,"certificateVerified":false,"explored":196339,"moveCount":15554,"result":"winnable"}}
+{"deal":15,"exit":3,"seconds":10.891,"output":{"explored":1276079,"reason":"time limit reached","result":"unknown"}}
+{"deal":16,"exit":0,"seconds":1.011,"output":{"certificate":null,"certificateVerified":false,"explored":102697,"moveCount":4419,"result":"winnable"}}
+{"deal":17,"exit":3,"seconds":10.73,"output":{"explored":1145524,"reason":"time limit reached","result":"unknown"}}
+{"deal":18,"exit":0,"seconds":0.154,"output":{"certificate":null,"certificateVerified":false,"explored":76657,"moveCount":5220,"result":"winnable"}}
+{"deal":19,"exit":0,"seconds":0.311,"output":{"certificate":null,"certificateVerified":false,"explored":83345,"moveCount":10188,"result":"winnable"}}
+{"deal":20,"exit":0,"seconds":0.653,"output":{"certificate":null,"certificateVerified":false,"explored":184157,"moveCount":24298,"result":"winnable"}}
+{"deal":21,"exit":3,"seconds":10.542,"output":{"explored":755742,"reason":"time limit reached","result":"unknown"}}
+{"deal":22,"exit":3,"seconds":11.239,"output":{"explored":2082304,"reason":"time limit reached","result":"unknown"}}
+{"deal":23,"exit":3,"seconds":11.073,"output":{"explored":1592068,"reason":"time limit reached","result":"unknown"}}
+{"deal":24,"exit":0,"seconds":4.977,"output":{"certificate":null,"certificateVerified":false,"explored":300236,"moveCount":2615,"result":"winnable"}}
+{"deal":25,"exit":0,"seconds":0.917,"output":{"certificate":null,"certificateVerified":false,"explored":62621,"moveCount":971,"result":"winnable"}}
+{"deal":26,"exit":0,"seconds":0.218,"output":{"certificate":null,"certificateVerified":false,"explored":86971,"moveCount":7444,"result":"winnable"}}
+{"deal":27,"exit":3,"seconds":10.526,"output":{"explored":763074,"reason":"time limit reached","result":"unknown"}}
+{"deal":28,"exit":0,"seconds":7.592,"output":{"certificate":null,"certificateVerified":false,"explored":923232,"moveCount":151514,"result":"winnable"}}
+{"deal":29,"exit":3,"seconds":10.418,"output":{"explored":650837,"reason":"time limit reached","result":"unknown"}}
+{"deal":30,"exit":3,"seconds":11.437,"output":{"explored":2369249,"reason":"time limit reached","result":"unknown"}}
+{"deal":31,"exit":3,"seconds":11.414,"output":{"explored":2169831,"reason":"time limit reached","result":"unknown"}}
+{"deal":32,"exit":3,"seconds":10.875,"output":{"explored":1298025,"reason":"time limit reached","result":"unknown"}}
+{"deal":33,"exit":0,"seconds":0.198,"output":{"certificate":null,"certificateVerified":false,"explored":66709,"moveCount":7174,"result":"winnable"}}
+{"deal":34,"exit":0,"seconds":0.358,"output":{"certificate":null,"certificateVerified":false,"explored":58210,"moveCount":7978,"result":"winnable"}}
+{"deal":35,"exit":3,"seconds":10.364,"output":{"explored":587113,"reason":"time limit reached","result":"unknown"}}
+{"deal":36,"exit":0,"seconds":2.966,"output":{"certificate":null,"certificateVerified":false,"explored":200948,"moveCount":3403,"result":"winnable"}}
+{"deal":37,"exit":0,"seconds":0.313,"output":{"certificate":null,"certificateVerified":false,"explored":130507,"moveCount":10133,"result":"winnable"}}
+{"deal":38,"exit":0,"seconds":0.462,"output":{"certificate":null,"certificateVerified":false,"explored":162442,"moveCount":15176,"result":"winnable"}}
+{"deal":39,"exit":3,"seconds":10.991,"output":{"explored":1651167,"reason":"time limit reached","result":"unknown"}}
+{"deal":40,"exit":3,"seconds":10.309,"output":{"explored":495997,"reason":"time limit reached","result":"unknown"}}
+{"deal":41,"exit":0,"seconds":1.07,"output":{"certificate":null,"certificateVerified":false,"explored":182324,"moveCount":19728,"result":"winnable"}}
+{"deal":42,"exit":3,"seconds":10.31,"output":{"explored":538069,"reason":"time limit reached","result":"unknown"}}
+{"deal":43,"exit":0,"seconds":0.189,"output":{"certificate":null,"certificateVerified":false,"explored":63831,"moveCount":4928,"result":"winnable"}}
+{"deal":44,"exit":0,"seconds":0.228,"output":{"certificate":null,"certificateVerified":false,"explored":61713,"moveCount":5411,"result":"winnable"}}
+{"deal":45,"exit":0,"seconds":1.235,"output":{"certificate":null,"certificateVerified":false,"explored":366404,"moveCount":28937,"result":"winnable"}}
+{"deal":46,"exit":0,"seconds":3.021,"output":{"certificate":null,"certificateVerified":false,"explored":260220,"moveCount":7302,"result":"winnable"}}
+{"deal":47,"exit":0,"seconds":0.496,"output":{"certificate":null,"certificateVerified":false,"explored":105367,"moveCount":16499,"result":"winnable"}}
+{"deal":48,"exit":3,"seconds":10.335,"output":{"explored":570156,"reason":"time limit reached","result":"unknown"}}
+{"deal":49,"exit":0,"seconds":0.167,"output":{"certificate":null,"certificateVerified":false,"explored":48569,"moveCount":5753,"result":"winnable"}}
+{"deal":50,"exit":0,"seconds":0.416,"output":{"certificate":null,"certificateVerified":false,"explored":48192,"moveCount":3920,"result":"winnable"}}
+{"deal":51,"exit":0,"seconds":0.284,"output":{"certificate":null,"certificateVerified":false,"explored":133456,"moveCount":9309,"result":"winnable"}}
+{"deal":52,"exit":0,"seconds":2.836,"output":{"certificate":null,"certificateVerified":false,"explored":222818,"moveCount":4813,"result":"winnable"}}
+{"deal":53,"exit":0,"seconds":0.155,"output":{"certificate":null,"certificateVerified":false,"explored":50013,"moveCount":3663,"result":"winnable"}}
+{"deal":54,"exit":0,"seconds":0.072,"output":{"certificate":null,"certificateVerified":false,"explored":10757,"moveCount":1209,"result":"winnable"}}
+{"deal":55,"exit":0,"seconds":0.106,"output":{"certificate":null,"certificateVerified":false,"explored":18719,"moveCount":2507,"result":"winnable"}}
+{"deal":56,"exit":3,"seconds":10.375,"output":{"explored":591923,"reason":"time limit reached","result":"unknown"}}
+{"deal":57,"exit":0,"seconds":0.171,"output":{"certificate":null,"certificateVerified":false,"explored":65314,"moveCount":4604,"result":"winnable"}}
+{"deal":58,"exit":0,"seconds":0.06,"output":{"certificate":null,"certificateVerified":false,"explored":10672,"moveCount":1053,"result":"winnable"}}
+{"deal":59,"exit":0,"seconds":0.142,"output":{"certificate":null,"certificateVerified":false,"explored":48944,"moveCount":3665,"result":"winnable"}}
+{"deal":60,"exit":0,"seconds":1.089,"output":{"certificate":null,"certificateVerified":false,"explored":312349,"moveCount":31971,"result":"winnable"}}
+{"deal":61,"exit":3,"seconds":10.397,"output":{"explored":605860,"reason":"time limit reached","result":"unknown"}}
+{"deal":62,"exit":3,"seconds":10.3,"output":{"explored":512051,"reason":"time limit reached","result":"unknown"}}
+{"deal":63,"exit":0,"seconds":0.993,"output":{"certificate":null,"certificateVerified":false,"explored":111229,"moveCount":6575,"result":"winnable"}}
+{"deal":64,"exit":3,"seconds":10.397,"output":{"explored":523771,"reason":"time limit reached","result":"unknown"}}
+{"deal":65,"exit":3,"seconds":10.435,"output":{"explored":619010,"reason":"time limit reached","result":"unknown"}}
+{"deal":66,"exit":3,"seconds":11.179,"output":{"explored":1958921,"reason":"time limit reached","result":"unknown"}}
+{"deal":67,"exit":0,"seconds":5.942,"output":{"certificate":null,"certificateVerified":false,"explored":751149,"moveCount":76960,"result":"winnable"}}
+{"deal":68,"exit":3,"seconds":10.578,"output":{"explored":783994,"reason":"time limit reached","result":"unknown"}}
+{"deal":69,"exit":3,"seconds":10.379,"output":{"explored":563708,"reason":"time limit reached","result":"unknown"}}
+{"deal":70,"exit":3,"seconds":11.175,"output":{"explored":1751598,"reason":"time limit reached","result":"unknown"}}
+{"deal":71,"exit":0,"seconds":0.104,"output":{"certificate":null,"certificateVerified":false,"explored":13782,"moveCount":2608,"result":"winnable"}}
+{"deal":72,"exit":3,"seconds":10.481,"output":{"explored":715581,"reason":"time limit reached","result":"unknown"}}
+{"deal":73,"exit":0,"seconds":0.472,"output":{"certificate":null,"certificateVerified":false,"explored":203111,"moveCount":13344,"result":"winnable"}}
+{"deal":74,"exit":0,"seconds":0.42,"output":{"certificate":null,"certificateVerified":false,"explored":117142,"moveCount":14071,"result":"winnable"}}
+{"deal":75,"exit":0,"seconds":1.657,"output":{"certificate":null,"certificateVerified":false,"explored":448142,"moveCount":44112,"result":"winnable"}}
+{"deal":76,"exit":0,"seconds":0.544,"output":{"certificate":null,"certificateVerified":false,"explored":121955,"moveCount":7939,"result":"winnable"}}
+{"deal":77,"exit":3,"seconds":10.353,"output":{"explored":587249,"reason":"time limit reached","result":"unknown"}}
+{"deal":78,"exit":0,"seconds":0.311,"output":{"certificate":null,"certificateVerified":false,"explored":89742,"moveCount":7220,"result":"winnable"}}
+{"deal":79,"exit":3,"seconds":10.332,"output":{"explored":568968,"reason":"time limit reached","result":"unknown"}}
+{"deal":80,"exit":0,"seconds":0.506,"output":{"certificate":null,"certificateVerified":false,"explored":137735,"moveCount":10637,"result":"winnable"}}
+{"deal":81,"exit":0,"seconds":4.897,"output":{"certificate":null,"certificateVerified":false,"explored":355006,"moveCount":7385,"result":"winnable"}}
+{"deal":82,"exit":0,"seconds":0.26,"output":{"certificate":null,"certificateVerified":false,"explored":41165,"moveCount":2761,"result":"winnable"}}
+{"deal":83,"exit":0,"seconds":0.201,"output":{"certificate":null,"certificateVerified":false,"explored":20693,"moveCount":2517,"result":"winnable"}}
+{"deal":84,"exit":3,"seconds":10.685,"output":{"explored":988447,"reason":"time limit reached","result":"unknown"}}
+{"deal":85,"exit":0,"seconds":0.89,"output":{"certificate":null,"certificateVerified":false,"explored":88284,"moveCount":4533,"result":"winnable"}}
+{"deal":86,"exit":0,"seconds":0.36,"output":{"certificate":null,"certificateVerified":false,"explored":108579,"moveCount":8797,"result":"winnable"}}
+{"deal":87,"exit":0,"seconds":0.118,"output":{"certificate":null,"certificateVerified":false,"explored":49766,"moveCount":3425,"result":"winnable"}}
+{"deal":88,"exit":0,"seconds":10.496,"output":{"certificate":null,"certificateVerified":false,"explored":1831123,"moveCount":195538,"result":"winnable"}}
+{"deal":89,"exit":3,"seconds":11.403,"output":{"explored":2332442,"reason":"time limit reached","result":"unknown"}}
+{"deal":90,"exit":3,"seconds":10.713,"output":{"explored":1029683,"reason":"time limit reached","result":"unknown"}}
+{"deal":91,"exit":0,"seconds":1.937,"output":{"certificate":null,"certificateVerified":false,"explored":206678,"moveCount":8745,"result":"winnable"}}
+{"deal":92,"exit":0,"seconds":0.348,"output":{"certificate":null,"certificateVerified":false,"explored":115932,"moveCount":11114,"result":"winnable"}}
+{"deal":93,"exit":3,"seconds":11.22,"output":{"explored":2018589,"reason":"time limit reached","result":"unknown"}}
+{"deal":94,"exit":0,"seconds":1.35,"output":{"certificate":null,"certificateVerified":false,"explored":193493,"moveCount":25783,"result":"winnable"}}
+{"deal":95,"exit":0,"seconds":0.106,"output":{"certificate":null,"certificateVerified":false,"explored":24265,"moveCount":2387,"result":"winnable"}}
+{"deal":96,"exit":0,"seconds":0.151,"output":{"certificate":null,"certificateVerified":false,"explored":46036,"moveCount":3233,"result":"winnable"}}
+{"deal":97,"exit":0,"seconds":0.361,"output":{"certificate":null,"certificateVerified":false,"explored":157502,"moveCount":10515,"result":"winnable"}}
+{"deal":98,"exit":0,"seconds":0.198,"output":{"certificate":null,"certificateVerified":false,"explored":61024,"moveCount":6264,"result":"winnable"}}
+{"deal":99,"exit":0,"seconds":2.651,"output":{"certificate":null,"certificateVerified":false,"explored":275240,"moveCount":24873,"result":"winnable"}}
+{"deal":100,"exit":3,"seconds":10.391,"output":{"explored":584358,"reason":"time limit reached","result":"unknown"}}

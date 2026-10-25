@@ -1,0 +1,36 @@
+{
+  "blog_commit": "1fa642c1ad1cb9e96c9535773ddc021fe6a17271",
+  "copied_on": "2026-10-25",
+  "artifacts": [
+    {
+      "file": "FreeCell11982.lean",
+      "source": "/Users/csells/Code/csells/sb8/content/public/freecell-11982/FreeCell11982.lean",
+      "sha256": "4596577e7a3cc8dd73a78760ed45bb2a3572c01cfb4ce28a2f66651c65d3e93b"
+    },
+    {
+      "file": "original-run.log",
+      "source": "/Users/csells/Code/csells/sb8/specs/reviews/freecell-adversarial-20261025/lean/original-run.log",
+      "sha256": "9ae67d0aff0bcfec2a7c0abdfb7d886d3a511dcd968e8e6ec945f35139b0b718"
+    },
+    {
+      "file": "negative-controls.log",
+      "source": "/Users/csells/Code/csells/sb8/specs/reviews/freecell-adversarial-20261025/lean/negative-controls.log",
+      "sha256": "d1d8453871a3dccdb63b708787483e3610dacb9ed803a4ef82e75d6727067e48"
+    },
+    {
+      "file": "witness-replay.log",
+      "source": "/Users/csells/Code/csells/sb8/specs/reviews/freecell-adversarial-20261025/lean/witness-replay.log",
+      "sha256": "bcbd150818fc8671486490bb416ab671fe4e8800fbdfaf969696c9c0a719731f"
+    },
+    {
+      "file": "environment.json",
+      "source": "/Users/csells/Code/csells/sb8/specs/reviews/freecell-adversarial-20261025/lean/environment.json",
+      "sha256": "e4347abc4cb345d7aee12e45655aa0b04abf0e612242c55e82b6ea23060ab1b4"
+    },
+    {
+      "file": "independent-baseline.json",
+      "source": "/Users/csells/Code/csells/sb8/specs/reviews/freecell-adversarial-20261025/semantics/baseline.json",
+      "sha256": "d8e5ae4c322342e43157852b14d6bb718571330064d33ba38e467964fc069eeb"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+✔ [2/37] Built FreeCell.Card (347ms)
+✔ [3/37] Built FreeCell.Card:c.o (61ms)
+✔ [4/37] Built FreeCell.State (165ms)
+✔ [5/37] Built FreeCell.State:c.o (98ms)
+✔ [6/37] Built FreeCell.Rules (244ms)
+✔ [7/37] Built FreeCell.Rules:c.o (154ms)
+✔ [8/37] Built FreeCell.Valid (253ms)
+✔ [9/37] Built FreeCell.Heuristic (189ms)
+✔ [10/37] Built FreeCell.Heuristic:c.o (58ms)
+✔ [11/37] Built FreeCell.Valid:c.o (53ms)
+✔ [12/37] Built FreeCell.Finite (241ms)
+✔ [13/37] Built FreeCell.Reach (224ms)
+✔ [14/37] Built FreeCell.Propose (299ms)
+✔ [15/37] Built FreeCell.Deal (262ms)
+✔ [16/37] Built FreeCell.Finite:c.o (56ms)
+✔ [17/37] Built FreeCell.Reach:c.o (53ms)
+✔ [18/37] Built FreeCell.Deal:c.o (66ms)
+✔ [19/37] Built FreeCell.Cert (225ms)
+✔ [20/37] Built FreeCell.Cert:c.o (69ms)
+✔ [21/37] Built FreeCell.Supermove (398ms)
+✔ [22/37] Built FreeCell.Propose:c.o (373ms)
+✔ [23/37] Built FreeCell.Supermove:c.o (53ms)
+✔ [24/37] Built FreeCell.Search (340ms)
+✔ [25/37] Built FreeCell.Search:c.o (95ms)
+✔ [26/37] Built FreeCell.Codec (266ms)
+✔ [27/37] Built FreeCell.Verify (220ms)
+✔ [28/37] Built FreeCell.Codec:c.o (266ms)
+✔ [29/37] Built FreeCell.Verify:c.o (121ms)
+✔ [30/37] Built FreeCell.Driver (260ms)
+✔ [31/37] Built FreeCell (168ms)
+✔ [33/37] Built FreeCell.Driver:c.o (140ms)
+✔ [34/37] Built FreeCell:c.o (40ms)
+✔ [35/37] Built Main (971ms)
+✔ [36/37] Built Main:c.o (314ms)
+✔ [37/37] Built freecell:exe (383ms)
+Build completed successfully (37 jobs).
+axioms: only propext, Classical.choice, Quot.sound
+✔ [34/38] Built FreeCellTest.Reference (246ms)
+✔ [35/38] Built FreeCellTest.Reference:c.o (175ms)
+✔ [36/38] Built FreeCellTest.Main (349ms)
+✔ [37/38] Built FreeCellTest.Main:c.o (307ms)
+✔ [38/38] Built tests:exe (82ms)
+Build completed successfully (38 jobs).
+== validity
+== decision procedure
+== differential against the #11982 reference rules
+   distinct edges: ours 314366, reference 314366 (independent Python baseline: 314366)
+== unwinnable certificate controls (fresh, against new checker)
+== winning path controls
+== text formats
+81 passed, 0 failed
+57 passed, 0 failed
+scripts/check.sh  206.82s user 4.92s system 101% cpu 3:29.03 total

@@ -1,0 +1,11 @@
+'cert_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CERT_SIZE 84767
+CERT_VALID true
+DELETE_DEAL false
+SUCCESSORS 11
+DELETE_FIRST false
+DELETE_LAST false
+INSERT_WIN false
+EMPTY_CERT false
+FUEL_ZERO false
+FUEL_ONE false

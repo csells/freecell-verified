@@ -1,0 +1,11 @@
+{
+  "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "processor": "Apple M5 Max",
+  "machine": "Mac17,6",
+  "command": [
+    "/var/folders/6k/xzgngnms6jg4_z2l40y0_9vh0000gn/T/freecell-lean-audit-mnggxjng/lean-4.35.0-darwin_aarch64/bin/lean",
+    "FreeCell11982.lean"
+  ],
+  "cwd": "/var/folders/6k/xzgngnms6jg4_z2l40y0_9vh0000gn/T/freecell-lean-audit-mnggxjng"
+}
